@@ -1,0 +1,50 @@
+//font path
+$font-url--google: "https://fonts.googleaips.com/css?family=Roboto:100,300,400,500,700,900";
+
+//font family stack for main styles
+$font-family--primary: "Roboto", Helvetica, Arial, sans-serif;
+$font-family--secondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+//font weights
+$font-weight-light: 300;
+$font-weight-base: 500;
+$font-weight-dark: 900;
+
+//font sizes
+$font-size--small: 14px;
+$font-size--base: 16px;
+$font-size--large: 20px;
+$font-size--xlrg: 24px;
+
+
+
+// base ui colors
+$white: #fff;
+$black: #000;
+$mine-shaft: #333;
+$dove-grey: #656565;
+$bombay: #b3b8bc;
+$lavendar: #d44fe9;
+$picton-blue: #46bcde;
+$emerald: #52d273;
+$mandy: #e94f64;
+$terrcotta: #e57254;
+$confetti: #e5c454;
+$color-primary: $bombay;
+$color-secondary: $white;
+
+
+//ui-colors theme colors
+$rainbow-colors: (1: $lavendar,
+                  2: $picton-blue,
+                  3: $emerald,
+                  4: $mandy,
+                  5: $terrcotta,
+                  6: $confetti );
+
+
+//media query breakpoint
+$brkpoint-s : 480px;
+$brkpoint-m : 768px;
+$brkpoint-l:  1024px;

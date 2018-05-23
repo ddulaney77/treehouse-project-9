@@ -1,0 +1,7 @@
+@mixin rainbow-colors($map){
+    @each $num, $color in $map {
+      &.rainbow__line--#{$num}{
+      background-color: $color;
+    }
+  }
+}
