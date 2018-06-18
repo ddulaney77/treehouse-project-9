@@ -10,7 +10,7 @@
 <body>
 
 <header>
-  <nav>
+  <nav class="nav">
     <ul>
         <li>icon</li>
         <li>icon</li>
@@ -21,69 +21,77 @@
 </header>
 
 
-
-
-
-<section class="dash">dashboard
+<section class="dash">
+  <h4>Dashboard</h4>
 <!-- make a search bar with placeholder -->
 <div class="info">
   <form class="search-bar" action ="index.html" method="post">
     <input class="search" type="text" placeholder="search gallery...">
   </form>
   </div>
+</section>
   <!-- add alter box to dashboard -->
-  <div class="alert">alerts
+  <div class="alert">
+    <h4>Alerts</h4>
     <!-- box with random words with x closing box -->
   </div>
-</section>
 
 
-<dvi class="bar">bar-chart
+
+<div class="bar">
+    <h4>Bar Chart</h4>
   <!-- js.charts bar chart with data -->
-  </dvi>
+  </div>
 
-<div class="donut">donut-chart
+<div class="donut">
+    <h4>Donut Chart</h4>
 <!-- js.charts donut chart with data -->
 </div>
 
-<div class="line">line-chart
+<div class="line">
+    <h4>Line Chart</h4>
 <!-- js.charts line chart with data -->
 </div>
 
-<div class="main">main-header
+<div class="main">
+    <h4>Main Header</h4>
 <!-- bell icon, and picture with name -->
 </div>
 
-<div class="mess">message-user
+<section class="mess">
+    <h4>Message User</h4>
 <!-- form field info check project 3 -->
 <button class="submit-btn" type="submit">Send</button>
 <div>
   <label for="message">Messge User</label>
   <textarea id="message" name="user_message"></textarea>
 </div>
+</section>
 
 
-</div>
+<section class="member-activity">
+  
+  <div class='container'>
+      <h4>Member Activity</h4>
+  <ul class="mem-list">
+    <li>Victoria Chambers</li>
+        <img src="images/victoria.jpg" alt="image of Victoria">
+        <a href="mailto:victoria.chamber80@example.com">
+    <li>Dale Byrd</li>
+        <img src="images/dale.jpg" alt="image of Dale">
+        <a href="mailto:dale.byrd52@example.com"></a>
+<li>Dawn Wood</li>
+        <img src="images/dawn.jpg" alt="image of Dawn">
+        <a href="mailto:dawn.wood16@example.com"></a>
+<li>Dan Oliver</li>
+        <img src="images/dan.jpg" alt="image of Dan">
+        <a href="mailto:dan.oliver82@example.com"></a>
+  </li>
+  </ul>
+  </div>
 
-
-<section member-activity>
-<div class="mems">new-members
-<p>Victoria Chambers</p>
-<img src="images/victoria.jpg" alt="image of Victoria">
-  <a href="mailto:victoria.chamber80example.com">
-
-<p>Dale Byrd</p>
-<img src="images/dale.jpg" alt="image of Dale">
-
-  <a href="mailto:dale.byrd52example.com"></a>
-<p>Dawn Wood</p>
-<img src="images/dawn.jpg" alt="image of Dawn">
-  <a href="mailto:dawn.wood16example.com"></a>
-<p>Dan Oliver</p>
-<img src="images/dan.jpg" alt="image of Dan">
-  <a href="mailto:dan.oliver82example.com"></a>
-</div>
-<div class="activity">recent-activity
+<div class="activity">
+  <h4>Recent Activity</h4>
     <p>Victoria Chambers commented on Yourapp's SEO tips 4 hours ago</p>
     <img src="images/victoria.jpg" alt="image of Victoria">
     <p>Dale Byrd liked the post Facebook changes for 2016 5 hours ago</p>
@@ -95,8 +103,8 @@
 </div>
 </section>
 
-
-<div class="set">settings 
+<section class="set">
+  <h4>Settings</h4> 
   <!-- has toggle switch on/off use download-->
   <div class="contact-email">
     <label for="email">Send Email Notification</label>
@@ -120,33 +128,46 @@
   </div>
   <button class="save-btn" type="submit">Save</button>
   <button class="cancel-btn" type="submit">Cancel</button>
-  </div>
+
   <div class="time-zone">
     <label for="zone">Select Time Zone</label>
     <select id="zone" name="user_zone">
       <option value="" disabled selected style= "display:none;">Select a Time Zone</option>
-
-
-<section class="stats">social-stats>
-  <div class="twit">Twitter</div>
-  <div class="face">Facebook</div>
-  <div class="goog">Google</div>
+    </div>
 </section>
 
+<section class="stats">
+  <h3>Social Stats</h3>
+  <div class="twit">
+    <h4>Twitter</h4>
+  </div>
+  <div class="face">
+    <h4>Facebook</h4>
+  </div>
+  <div class="goog">
+    <h4>Goggle</h4>
+  </div>
+</section>
 
-<div class="traffic">traffic-navigation
+    <div class="traffic">
+      <h4>Traffic Navigation</h4>
+        <button>Hourly</button>
+        <button>Daily</button>
+        <button>Weekly</button>
+        <button>Monthly</button>
 <!-- has hourly, daily,weekly,monthly data updates -->
 <!-- charts.js traffic data -->
-</div>
+    </div>
 
 
 
   <script src="js/app.js"></script>
+
   <div>
   <canvas id="myChart"></canvas>
 </div>
 
-<div class="container">
+
 
 </body>
 </html>

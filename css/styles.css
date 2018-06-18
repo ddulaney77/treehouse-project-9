@@ -309,4 +309,69 @@ ul {
 a {
   text-decoration: none; }
 
+.main {
+  background-color: #b88de0; }
+
+.nav {
+  background-color: aquamarine; }
+
+.dash {
+  background-color: lavenderblush; }
+
+.info {
+  display: flex; }
+
+.alert {
+  background-color: darkkhaki; }
+
+.traffic {
+  background-color: cornflowerblue; }
+
+.line {
+  background-color: lightblue; }
+
+.bar {
+  background-color: #dbb1c9; }
+
+.donut {
+  background-color: blanchedalmond; }
+
+.stats {
+  background-color: #27da27; }
+
+.twit {
+  height: 100px;
+  width: 100px;
+  background-color: #10073a; }
+
+.face {
+  background-color: #6060bb; }
+
+.goog {
+  height: 300px;
+  width: 800px;
+  background-color: greenyellow; }
+
+img {
+  max-width: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+.container {
+  display: flex;
+  border: 2px grey solid; }
+
+.member-activity {
+  background-color: lavender; }
+
+.mess {
+  background-color: lightpink; }
+
+.member-activity {
+  border: 2px red solid; }
+
+.set {
+  background-color: khaki; }
+
 /*# sourceMappingURL=styles.css.map */
