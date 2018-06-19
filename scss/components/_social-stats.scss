@@ -4,18 +4,30 @@
 // Style the social information to match the corresponding social network.
 // Style to match the overall look and feel of the dashboard.
 .stats{
-  background-color: rgb(39, 218, 39);
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: gainsboro;
 }
 .twit{
-  height: 100px;
-  width:100px;
-  background-color: rgb(16, 7, 58);
+  text-align: center;
+  height: 150px;
+  width:200px;
+  background-color: lightgrey;
+  border:2px darkgrey solid;
 }
+
 .face{
-  background-color: rgb(96, 96, 187);
+  text-align: center;
+  height:150px;
+  width:200px;
+  background-color:lightgrey;
+  border:2px darkgrey solid;
 }
 .goog{
-  height: 300px;
-  width:800px;
-  background-color: greenyellow;
+  text-align: center;
+  height: 150px;
+  width:100px;
+  background-color: lightgrey;
+  border:2px darkgrey solid;
 }

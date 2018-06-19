@@ -309,10 +309,18 @@ ul {
 a {
   text-decoration: none; }
 
+h4 {
+  font-size: 12px;
+  text-transform: uppercase; }
+
 .main {
+  height: 100px;
+  width: 100%;
   background-color: #b88de0; }
 
 .nav {
+  height: 100%;
+  width: 50px;
   background-color: aquamarine; }
 
 .dash {
@@ -325,7 +333,39 @@ a {
   background-color: darkkhaki; }
 
 .traffic {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
   background-color: cornflowerblue; }
+
+.hour,
+.day,
+.week,
+.day,
+.month {
+  height: 30px;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  background-color: aqua; }
+
+.hour:hover {
+  background-color: lavender; }
+
+.day:hover {
+  background-color: lavender; }
+
+.week:hover {
+  background-color: lavender; }
+
+.day:hover {
+  background-color: lavender; }
+
+.month:hover {
+  background-color: lavender; }
 
 .line {
   background-color: lightblue; }
@@ -337,20 +377,31 @@ a {
   background-color: blanchedalmond; }
 
 .stats {
-  background-color: #27da27; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: gainsboro; }
 
 .twit {
-  height: 100px;
-  width: 100px;
-  background-color: #10073a; }
+  text-align: center;
+  height: 150px;
+  width: 200px;
+  background-color: lightgrey;
+  border: 2px darkgrey solid; }
 
 .face {
-  background-color: #6060bb; }
+  text-align: center;
+  height: 150px;
+  width: 200px;
+  background-color: lightgrey;
+  border: 2px darkgrey solid; }
 
 .goog {
-  height: 300px;
-  width: 800px;
-  background-color: greenyellow; }
+  text-align: center;
+  height: 150px;
+  width: 100px;
+  background-color: lightgrey;
+  border: 2px darkgrey solid; }
 
 img {
   max-width: 100%;
@@ -360,7 +411,7 @@ img {
 
 .container {
   display: flex;
-  border: 2px grey solid; }
+  border-bottom: 2px grey solid; }
 
 .member-activity {
   background-color: lavender; }
