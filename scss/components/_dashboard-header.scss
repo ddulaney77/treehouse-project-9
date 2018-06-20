@@ -1,7 +1,13 @@
 .dash {
+  display:grid;
   background-color:lavenderblush;
+  margin:1em;
+  grid-gap:1em;
+  border: 2px solid darkgray;
 }
 
-.info {
-  display:flex;
+.search {
+  height:30px;
+  width:400px;
+  border-radius:4px;
 }

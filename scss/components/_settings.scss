@@ -6,6 +6,23 @@
 // Add Save and Cancel buttons (these do not have to do anything functional).
 // Style to match the overall look and feel of the dashboard.
 
-.set{
+.set {
+  display:grid;
+  margin: 1em;
   background-color: khaki;
+  border: 2px solid darkgray;
+}
+.save-btn {
+height: 20px;
+width:200px;
+border-radius:4px;
+background-color: plum;
+
+}
+
+.cancel-btn {
+  height: 20px;
+  width:200px;
+  border-radius:4px;
+  background-color: lightgrey;
 }

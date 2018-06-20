@@ -4,10 +4,12 @@
 // Style the social information to match the corresponding social network.
 // Style to match the overall look and feel of the dashboard.
 .stats{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display:grid;
+  grid-gap: 1em;
+  padding:1em;
+  margin:1em;
   background-color: gainsboro;
+  border: 2px solid darkgray;
 }
 .twit{
   text-align: center;
@@ -27,7 +29,8 @@
 .goog{
   text-align: center;
   height: 150px;
-  width:100px;
+  width:200px;
   background-color: lightgrey;
   border:2px darkgrey solid;
 }
+

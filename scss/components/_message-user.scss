@@ -6,4 +6,25 @@
 // Use JS to display error messages if user isn’t selected or message field is empty.
 // Style to match the overall look and feel of the dashboard.
 
-// Add an "autocomplete" feature for the "Search for User" box, listing names that match the search term.
+// Add an "autocomplete" 
+.submit-btn {
+  height:30px;
+  width:100px;
+  border-radius:4px;
+  background-color: limegreen;
+  margin:.5em;
+
+}
+#message {
+  display:grid;
+  background-color: lightgray;
+  height:50px;
+  width:300px;
+  margin:1em;
+  border-radius:4px;
+  border: 2px solid darkgray;
+}
+.mess {
+margin:1em;
+border: 2px solid darkgray;
+}

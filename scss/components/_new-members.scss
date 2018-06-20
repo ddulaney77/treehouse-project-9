@@ -4,15 +4,38 @@
   height:50px;
   border-radius: 50%;
 }
+
+#member-activity{
+  display:grid;
+  padding:1em;
+  margin:1em;
+  background-color: lavender;
+  border:2px darkgrey solid;
+}
  .container {
-  display:flex;
   border-bottom: 2px grey solid;
 }
 
-.member-activity{
-  background-color: lavender;
+#member-activity ul {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+// #member-activity li{
+//   width:50%;
+// }
+.grid,
+#member-activity {
+  grid-column: 2;
+}
+.grid {
+  display:grid;
+  padding:1em;
+  margin:1em;
 
+
+}
 .mess{
   background-color: lightpink;
 }
+
