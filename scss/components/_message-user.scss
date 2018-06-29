@@ -20,11 +20,11 @@
   background-color: lightgray;
   height:50px;
   width:300px;
-  margin:1em;
+  margin:0;
   border-radius:4px;
   border: 2px solid darkgray;
 }
 .mess {
-margin:1em;
+  grid-area: mess;
 border: 2px solid darkgray;
 }

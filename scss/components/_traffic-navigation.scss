@@ -1,11 +1,15 @@
 // Traffic chart widget
 // Create a navigation similar to the one in the mockup to display different data when the Hourly, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a different line chart is displayed on click.
+.traffic-nav {
+  grid-area: traffic-nav;
+
+}
+
+
 .traffic{
-  display:grid;
-  // justify-content: space-between;
-  // // align-items:flex-start;
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  margin:1em;
+  margin:0;
   padding:0;
   background-color: cornflowerblue;
   border: 2px solid darkgray;
@@ -18,8 +22,7 @@
  {
   height:30px;
   width:100px;
-  padding:10px;
-  margin-top: 5px;
+  // padding:10px;
   text-align: center;
   background-color: aqua;
 }

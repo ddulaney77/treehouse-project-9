@@ -5,9 +5,11 @@
 
 // Header with app name, notification icon badge and profile avatar and name.
 .main{
-  display: grid;
-  height:100px;
-  margin: 1em;
+  grid-area: main;
   background-color: rgb(184, 141, 224);
   border: 2px solid darkgray;
+}
+.bell-icon {
+  height: 50px;
+  width: 50px;
 }

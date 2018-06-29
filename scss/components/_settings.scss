@@ -7,22 +7,37 @@
 // Style to match the overall look and feel of the dashboard.
 
 .set {
-  display:grid;
-  margin: 1em;
+  grid-area: set;
   background-color: khaki;
   border: 2px solid darkgray;
 }
+
+
+// .contact-mail {
+//   grid-area: contact-mail;
+// }
+
+// .contact-profile {
+//   grid-area: contact-profile;
+// }
+// .switch-container {
+//   grid-area: switch-container;
+// }
 .save-btn {
-height: 20px;
-width:200px;
-border-radius:4px;
-background-color: plum;
+  display: flex;
+  height: 20px;
+  width:200px;
+  border-radius:4px;
+  background-color: plum;
+  margin-top: auto;
 
 }
 
 .cancel-btn {
+  display: flex;
   height: 20px;
   width:200px;
   border-radius:4px;
   background-color: lightgrey;
+  margin-top: auto;
 }
