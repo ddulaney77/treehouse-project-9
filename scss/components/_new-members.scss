@@ -5,8 +5,9 @@
   height:50px;
   border-radius: 50%;
 }
- h4{
+ .members h4{
    margin-left: 40px;
+   margin-bottom: 15px;
    font-size: 20px;
    color: grey;
  }
@@ -16,11 +17,6 @@
   border:2px darkgrey solid;
 }
 
-
-
-.mess{
-  background-color: lightpink;
-}
 
 .card {
   display: flex;

@@ -1,13 +1,18 @@
 .dash {
   grid-area: dash;
-  background-color:lavenderblush;
-  margin:1em;
-  grid-gap:1em;
+  background-color:#8685ad;
   border: 2px solid darkgray;
 }
 
-.search {
-  height:30px;
-  width:400px;
+.info {
+  display: flex;
+  justify-content: flex-end;
+  height:100px;
+  width: 100%;
   border-radius:4px;
+}
+
+.alert {
+  height: 100px;
+  width: 100%;
 }

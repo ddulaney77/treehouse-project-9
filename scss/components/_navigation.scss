@@ -1,41 +1,36 @@
  
 // SVG icon based navigation with the following links: Dashboard, Members, Visits, and Settings. NOTE: You only have to build out the main dashboard page, not any of the other pages.
 
-.container {
+.container{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr minmax(autofit, 1fr);
-  grid-template-areas: 
-  "main-nav main-nav"
-  "dash dash"
-  "bar bar"
-  "donut donut"
-  "line line"
-  "main main"
-  "traffic-nav traffic-nav"
-  "stats stats"
-  "members activity"
-  "mess set";
+  // grid-template-columns: 1fr, auto;
+  grid-template: 
+  "main-nav main-nav" 5em
+  "dash dash"  10em
+  "bar bar" auto
+  "donut donut" auto
+  "line line" auto
+  "main main" 10em
+  "traffic-nav traffic-nav" auto
+  "stats stats" 20em 
+  "members activity" auto
+  "mess set" auto;
+  grid-gap: 5px;
 }
+
 
 
 
 
 
 .main-nav {
+  display: grid;
   grid-area: main-nav;
-  background-color: darkmagenta;
+  background-color: #a09ed1;
   border: 2px solid darkgray;
-  // grid-row-start: 1;
-  // grid-row-end: -1;
+  grid-column: 1 / -1;
 }
-// .st0 {
-//   display:flex;
-//   flex-direction: column;
-//   height: 50px;
-//   width: 50px;
-//   color:darkorchid;
-// }
+
 .dashboard {
   display:flex;
   flex-direction: column;
@@ -47,7 +42,6 @@
   flex-direction: column;
   height: 50px;
   width: 50px;
-  
 }
 
 .visit-icon {

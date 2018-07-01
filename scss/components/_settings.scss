@@ -8,7 +8,7 @@
 
 .set {
   grid-area: set;
-  background-color: khaki;
+  // background-color: #d1cee5;
   border: 2px solid darkgray;
 }
 
@@ -25,19 +25,25 @@
 // }
 .save-btn {
   display: flex;
-  height: 20px;
+  height: 40px;
   width:200px;
   border-radius:4px;
-  background-color: plum;
-  margin-top: auto;
+  background-color: #8685ad;
+  margin: auto;
 
 }
 
 .cancel-btn {
   display: flex;
-  height: 20px;
+  height: 40px;
   width:200px;
   border-radius:4px;
-  background-color: lightgrey;
+  background-color: darkgrey;
+  margin: auto;
+}
+.submits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: auto;
 }

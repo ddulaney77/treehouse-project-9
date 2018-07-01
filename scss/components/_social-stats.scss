@@ -3,59 +3,85 @@
 // Use the provided SVG icons for each of the social networks.
 // Style the social information to match the corresponding social network.
 // Style to match the overall look and feel of the dashboard.
-.stats{
+.stats {
   display: grid;
   background-color: gainsboro;
   border: 2px solid darkgray;
   grid-area: stats;
+  // grid-column: 1/3;
 }
-.twit{
+.twit {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  height: 150px;
-  width:300px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 350px;
   background-color: lightgrey;
   border:2px darkgrey solid;
 
 }
 
-.face{
+.face {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  height:150px;
-  width:300px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 350px;
   background-color:lightgrey;
   border:2px darkgrey solid;
   
 }
-.goog{
+.goog {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  height: 150px;
-  width:300px;
+  justify-content: center;
+  align-items: center;
+flex-direction: row;
+   height: 200px;
+  width: 350px;
   background-color: lightgrey;
   border:2px darkgrey solid;
  
 }
 
 .social-icon {
+  display: flex;
+  flex-direction: row;
   background-color: cornflowerblue;
+  fill: white;
   border-radius: 50%;
   height:75px;
   width:75px;
-  text-align: center;
- 
-
- 
+  margin-top: 75px;
 }
 
 .stat-content {
   display: flex;
   flex-direction: column;
+  font-size: 22px;
   text-align: center;
+  margin: 50px;
+}
 
-  
+// .stat-content p {
+//   // display: flex;
+//   font-size: 22px;
+//   flex-direction: column;
+//   text-align: center;
+//   margin: auto;
+//   padding-left: 25px;
+// }
+
+.twit-icon {
+  display: flex;
+  margin: auto;
+}
+.face-icon {
+  display: flex;
+  margin: auto;
+}
+.goog-icon {
+  display: flex;
+  margin: auto;
 }

@@ -315,7 +315,7 @@ h4 {
 
 .main {
   grid-area: main;
-  background-color: #b88de0;
+  background-color: #8685ad;
   border: 2px solid darkgray; }
 
 .bell-icon {
@@ -324,14 +324,15 @@ h4 {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr minmax(autofit, 1fr);
-  grid-template-areas: "main-nav main-nav" "dash dash" "bar bar" "donut donut" "line line" "main main" "traffic-nav traffic-nav" "stats stats" "members activity" "mess set"; }
+  grid-template: "main-nav main-nav" 5em "dash dash"  10em "bar bar" auto "donut donut" auto "line line" auto "main main" 10em "traffic-nav traffic-nav" auto "stats stats" 20em  "members activity" auto "mess set" auto;
+  grid-gap: 5px; }
 
 .main-nav {
+  display: grid;
   grid-area: main-nav;
-  background-color: darkmagenta;
-  border: 2px solid darkgray; }
+  background-color: #a09ed1;
+  border: 2px solid darkgray;
+  grid-column: 1 / -1; }
 
 .dashboard {
   display: flex;
@@ -359,15 +360,19 @@ h4 {
 
 .dash {
   grid-area: dash;
-  background-color: lavenderblush;
-  margin: 1em;
-  grid-gap: 1em;
+  background-color: #8685ad;
   border: 2px solid darkgray; }
 
-.search {
-  height: 30px;
-  width: 400px;
+.info {
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+  width: 100%;
   border-radius: 4px; }
+
+.alert {
+  height: 100px;
+  width: 100%; }
 
 .alert {
   background-color: darkkhaki; }
@@ -376,49 +381,57 @@ h4 {
   grid-area: traffic-nav; }
 
 .traffic {
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  background-color: #8685ad;
   border: 2px solid darkgray; }
 
-.hour,
-.day,
-.week,
-.day,
-.month {
-  height: 30px;
-  width: 100px;
+.update {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-end; }
+
+.update li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.update a {
+  display: flex;
+  height: 50px;
+  width: 150px;
+  background-color: darkgrey;
+  font-size: 18px;
+  border-radius: 5px;
   text-align: center;
-  background-color: aqua; }
+  padding-top: 15px; }
 
-.hour:hover {
+a:hover {
   background-color: lavender; }
 
-.day:hover {
+a:hover {
   background-color: lavender; }
 
-.week:hover {
+a:hover {
   background-color: lavender; }
 
-.day:hover {
+a:hover {
   background-color: lavender; }
 
-.month:hover {
+a:hover {
   background-color: lavender; }
 
 .line {
   grid-area: line;
-  background-color: lightblue; }
+  background-color: #947CB0; }
 
 .bar {
-  grid-area: bar;
-  background-color: #dbb1c9; }
+  grid-area: bar; }
 
 .donut {
   grid-area: donut;
-  background-color: blanchedalmond; }
+  background-color: #947CB0; }
 
 .stats {
   display: grid;
@@ -429,41 +442,61 @@ h4 {
 .twit {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  height: 150px;
-  width: 300px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 350px;
   background-color: lightgrey;
   border: 2px darkgrey solid; }
 
 .face {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  height: 150px;
-  width: 300px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 350px;
   background-color: lightgrey;
   border: 2px darkgrey solid; }
 
 .goog {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  text-align: center;
-  height: 150px;
-  width: 300px;
+  height: 200px;
+  width: 350px;
   background-color: lightgrey;
   border: 2px darkgrey solid; }
 
 .social-icon {
+  display: flex;
+  flex-direction: row;
   background-color: cornflowerblue;
+  fill: white;
   border-radius: 50%;
   height: 75px;
   width: 75px;
-  text-align: center; }
+  margin-top: 75px; }
 
 .stat-content {
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  font-size: 22px;
+  text-align: center;
+  margin: 50px; }
+
+.twit-icon {
+  display: flex;
+  margin: auto; }
+
+.face-icon {
+  display: flex;
+  margin: auto; }
+
+.goog-icon {
+  display: flex;
+  margin: auto; }
 
 img {
   display: block;
@@ -472,8 +505,9 @@ img {
   height: 50px;
   border-radius: 50%; }
 
-h4 {
+.members h4 {
   margin-left: 40px;
+  margin-bottom: 15px;
   font-size: 20px;
   color: grey; }
 
@@ -481,9 +515,6 @@ h4 {
   grid-area: members;
   background-color: lavender;
   border: 2px darkgrey solid; }
-
-.mess {
-  background-color: lightpink; }
 
 .card {
   display: flex;
@@ -513,45 +544,56 @@ h4 {
   margin-left: 30px;
   font-size: 20px; }
 
-.submit-btn {
-  height: 30px;
-  width: 100px;
-  border-radius: 4px;
-  background-color: limegreen;
-  margin: .5em; }
+.activity h4 {
+  margin-left: 40px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: grey; }
 
-#message {
-  display: grid;
-  background-color: lightgray;
-  height: 50px;
+.submit-btn {
+  display: flex;
+  height: 40px;
   width: 300px;
-  margin: 0;
   border-radius: 4px;
-  border: 2px solid darkgray; }
+  background-color: #8685ad;
+  margin: auto; }
 
 .mess {
   grid-area: mess;
   border: 2px solid darkgray; }
 
+textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 300px;
+  margin: auto; }
+
 .set {
   grid-area: set;
-  background-color: khaki;
   border: 2px solid darkgray; }
 
 .save-btn {
   display: flex;
-  height: 20px;
+  height: 40px;
   width: 200px;
   border-radius: 4px;
-  background-color: plum;
-  margin-top: auto; }
+  background-color: #8685ad;
+  margin: auto; }
 
 .cancel-btn {
   display: flex;
-  height: 20px;
+  height: 40px;
   width: 200px;
   border-radius: 4px;
-  background-color: lightgrey;
+  background-color: darkgrey;
+  margin: auto; }
+
+.submits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: auto; }
 
 /*# sourceMappingURL=styles.css.map */

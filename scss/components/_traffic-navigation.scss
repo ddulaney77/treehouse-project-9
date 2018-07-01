@@ -2,42 +2,53 @@
 // Create a navigation similar to the one in the mockup to display different data when the Hourly, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a different line chart is displayed on click.
 .traffic-nav {
   grid-area: traffic-nav;
-
 }
 
 
 .traffic{
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-  margin:0;
-  padding:0;
-  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  background-color: #8685ad;
   border: 2px solid darkgray;
 }
-.hour,
-.day,
-.week,
-.day,
-.month
- {
-  height:30px;
-  width:100px;
-  // padding:10px;
+.update {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.update li  {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+  .update a {
+  display: flex;
+  height: 50px;
+  width: 150px;
+  background-color: darkgrey;
+  font-size: 18px;
+  border-radius: 5px;
   text-align: center;
-  background-color: aqua;
+  padding-top:15px;
 }
-.hour:hover{
+a:hover{
   background-color: lavender;
 }
-.day:hover{
+a:hover{
   background-color: lavender;
 }
-.week:hover{
+a:hover{
   background-color: lavender;
 }
-.day:hover{
+a:hover{
   background-color: lavender;
 }
-.month:hover {
+a:hover {
   background-color: lavender;
 }
+// .traffic h4 {
+
+// }
