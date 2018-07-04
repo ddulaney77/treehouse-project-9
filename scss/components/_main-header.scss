@@ -4,13 +4,29 @@
 
 
 // Header with app name, notification icon badge and profile avatar and name.
-.main{
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
   grid-area: main;
   background-color: #8685ad;
   border: 2px solid darkgray;
+  margin: 0;
 }
 .bell-icon {
-
+  max-width: 100%;
   height: 50px;
   width: 50px;
+  justify-self: right;
+}
+.main span {
+  color: white;
+  font-size: 42px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main h2 {
+  font-size: 38px;
+  color: lightgrey;
+  font-family: 'Times New Roman', Times, serif;
 }

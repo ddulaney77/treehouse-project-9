@@ -7,43 +7,40 @@
 // Style to match the overall look and feel of the dashboard.
 
 .set {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(50px, auto);
   grid-area: set;
-  // background-color: #d1cee5;
   border: 2px solid darkgray;
+  justify-items: left;
 }
-
-
-// .contact-mail {
-//   grid-area: contact-mail;
-// }
-
-// .contact-profile {
-//   grid-area: contact-profile;
-// }
-// .switch-container {
-//   grid-area: switch-container;
-// }
 .save-btn {
   display: flex;
-  height: 40px;
-  width:200px;
-  border-radius:4px;
+  height: 50px;
+  width:390px;
+  border-radius:5px;
   background-color: #8685ad;
-  margin: auto;
+  margin-top: auto;
+  color: white;
+  font-size: 20px;
 
 }
 
 .cancel-btn {
   display: flex;
-  height: 40px;
-  width:200px;
-  border-radius:4px;
+  height: 50px;
+  width:390px;
+  border-radius:5px;
   background-color: darkgrey;
-  margin: auto;
-}
+   margin-top: auto;
+   color: white;
+   font-size: 20px;
+
+} 
+
 .submits {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-auto-rows: minmax(100px, auto);
+  justify-items: center;
 }

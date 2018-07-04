@@ -3,27 +3,14 @@
 // Include avatars for each member (You can search for a “random user generator” like https://randomuser.me/photos or find some some pictures elsewhere).
 // Add the information for each user as shown in the mockup, such as Member name, email address, Sign up Date etc.
 .activity {
+  display: grid;
+  grid-template-columns: 80px 2fr 80px;
+  grid-auto-rows: minmax(80px, auto);
   grid-area: activity;
   background-color: lavender;
-}
-
-.mem-pic {
-  display: flex;
-  flex-direction: row;
-  margin-left: 30px;
-  height: 140px;
-}
-
-.mem-activity {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
+  justify-items: left;
+  padding-left: 25px;
+  padding:10px;
   font-size: 20px;
 }
 
-.activity h4 {
-  margin-left: 40px;
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: grey;
-}

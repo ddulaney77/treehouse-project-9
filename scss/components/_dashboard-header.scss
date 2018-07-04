@@ -1,18 +1,15 @@
 .dash {
   grid-area: dash;
-  background-color:#8685ad;
+  grid-template-columns: 1fr 1fr;
   border: 2px solid darkgray;
 }
 
 .info {
-  display: flex;
-  justify-content: flex-end;
-  height:100px;
-  width: 100%;
-  border-radius:4px;
-}
+ display: grid;
 
-.alert {
-  height: 100px;
-  width: 100%;
+
+}
+.info form input{
+  height: 50px;
+  width: 500px;
 }
