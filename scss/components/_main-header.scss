@@ -11,22 +11,22 @@
   grid-area: main;
   background-color: #8685ad;
   border: 2px solid darkgray;
-  margin: 0;
+ 
 }
 .bell-icon {
   max-width: 100%;
   height: 50px;
   width: 50px;
-  justify-self: right;
+  justify-self: flex-end;
 }
 .main span {
   color: white;
-  font-size: 42px;
+  font-size: 36px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main h2 {
-  font-size: 38px;
+.main p{
+  font-size: 30px;
   color: lightgrey;
   font-family: 'Times New Roman', Times, serif;
 }

@@ -7,6 +7,17 @@
 // This could be a pop-up window or dropdown menu.
 .alert {
   display: grid;
+  grid-area: alert;
+  grid-template-areas: 100px 1fr;
+  grid-auto-rows: 50px;
   background-color:#8685ad;
-
+}
+.alert span{
+  color: white;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.alert p {
+  color: white;
+  font-size: 18px;
 }

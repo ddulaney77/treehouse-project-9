@@ -4,12 +4,24 @@
   border: 2px solid darkgray;
 }
 
-.info {
+.dash-bar {
  display: grid;
+ grid-template-columns: 120px 1fr;
+ grid-auto-rows: 80px;
+ justify-items: right;
+padding-top: 30px;
+}
 
+.dash-bar p {
+  font-size: 24px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
-.info form input{
+
+.dash-bar form input{
   height: 50px;
-  width: 500px;
+  width: 800px;
+  border: 1px solid grey;
 }
+
