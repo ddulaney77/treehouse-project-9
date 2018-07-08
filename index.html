@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web App Dashboard</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
 <body>
   
@@ -26,9 +27,16 @@
 	<g>
 		<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
 			c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
-	</g>
+  </g>
+
 </g>
+
 </svg>
+<div class="avatar">
+  <img src="images/avatar.jpg" alt="avatar image">
+  <p>Dana Dulaney</p>
+  </div>
+
 </div>
 
 <div class="main-nav">
@@ -124,47 +132,54 @@
   </form>
 </div>
   <div class="alert">
-    <p><span>Alerts</span></p>
+    <p><span>Alert</span></p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloremque distinctio nobis!</p>
 </div>
 </section>
-  <!-- add alter box to dashboard -->
 
-
-
+  <section class="traffic-nav">
+      <ul class="traffic">
+          <li><a href="#hour"> Hourly </a></li>
+          <li><a href="#day"> Daily </a></li>
+          <li><a href="#week"> Weekly </a></li>
+          <li><a href="#month"> Monthly </a></li>
+      </ul>
+        <div class="traffic-chart">
+            <canvas id="myChart"></canvas>
+          </div>
+          </div>
+    </section>
 
 <div class="bar">
-    <h4>Bar Chart</h4>
     <div class="bar-chart">
         <canvas id="myChart"></canvas>
-      </div>
-  <!-- js.charts bar chart with data -->
+    </div>
   </div>
 
 <div class="donut">
-    <h4>Donut Chart</h4>
     <div class="donut-chart">
         <canvas id="myChart"></canvas>
-      </div>
-<!-- js.charts donut chart with data -->
+</div>
 </div>
 
-<div class="line">
-    <h4>Line Chart</h4>
+<div class="line">  
     <div class="line-chart">
         <canvas id="myChart"></canvas>
-      </div>
-<!-- js.charts line chart with data -->
+</div>
 </div>
 
 
 
 <section class="mess">
+    <div class="mess-title">
+        <h4>Message User</h4>
+      </div>
     <div class="info">
         <form class="search-bar" action ="index.html" method="post">
           <input class="search" type="text" placeholder="Search for User">
         </form>
         </div>
+      
 <div class="use-info">
   <label for="message"></label>
   <textarea id="message" name="user_message" placeholder="Message for User"></textarea>
@@ -172,20 +187,10 @@
 </div>
 </section>
 
-<section class="traffic-nav">
-  <ul class="traffic">
-      <li><a href="#hour"> Hourly </a></li>
-      <li><a href="#day"> Daily </a></li>
-      <li><a href="#week"> Weekly </a></li>
-      <li><a href="#month"> Monthly </a></li>
-  </ul>
-    <div class="traffic-chart">
-        <canvas id="myChart"></canvas>
-      </div>
-      </div>
-</section>
+
 
 <div id="stat-wrapper">
+  <h4>Social Stats</h4>
   <section class="stats">
       <div class="twit">
         <div class="stat-content">
@@ -298,8 +303,13 @@
             </div>
 </section>
 
+<div id="activity-wrapper">
+<div class="activity-title">
+    <h4>Member Activity</h4>
+  </div>
+</div>
 <section class="activity">
-
+ 
     <div class="mem-pic">
       <img src="images/victoria.jpg" alt="image of Victoria">
     </div>
@@ -339,11 +349,14 @@
         <div class="time">
           <p>1 day ago</p> 
         </div>
+       
 </section>
 
 
 <section class="set">
+  <div class="set-title">
   <h4>Settings</h4> 
+</div>
   <!-- has toggle switch on/off use download-->
   <div class="contact-email">
     <label for="email">Send Email Notification</label>

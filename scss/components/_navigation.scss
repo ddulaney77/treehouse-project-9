@@ -3,19 +3,19 @@
 
 .container{
   display: grid;
-  grid-template-columns: 100px repeat(2, 1fr);
+  grid-template-columns: 100px 20px repeat(2, 1fr) 20px;
   grid-auto-rows:  auto;
   grid-template-areas:
-  "main-nav main main"
-  "main-nav dash dash"
-  "main-nav alert alert"
-  "main-nav bar bar" 
-  "main-nav donut donut" 
-  "main-nav line line"
-  "main-nav traffic-nav traffic-nav" 
-  "main-nav stats stats"
-  "main-nav members activity" 
-  "main-nav mess set" ;
+  "main main main main main"
+  "main-nav . dash dash ."
+  "main-nav . alert alert ."
+  "main-nav . bar donut ." 
+  "main-nav . bar donut ." 
+  "main-nav . line line ."
+  "main-nav . traffic-nav traffic-nav ." 
+  "main-nav . stats stats ."
+  "main-nav . members activity ." 
+  "main-nav . mess set ." ;
 }
 
 .main-nav {
@@ -28,32 +28,13 @@
 
 }
 
-.dashboard {
-  max-width: 100%;
-  height: 50px;
-  width: 50px;
-  margin: auto;
-}
-.set-icon {
+.dashboard, .set-icon, .visit-icon, .member-icon {
   max-width: 100%;
   height: 50px;
   width: 50px;
   margin: auto;
 }
 
-.visit-icon {
-  max-width: 100%;
-  height: 50px;
-  width: 50px;
-  margin: auto;
-}
-
-.member-icon {
-  max-width: 100%;
-  height: 50px;
-  width: 50px;
-  margin: auto;
-}
 
 // @media (min-width:768px){
 //   .main-nav {

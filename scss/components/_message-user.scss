@@ -19,6 +19,16 @@
   
 }
 
+.mess-title h4{
+  display: grid;
+  grid-column: 1/ 5;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: grey;
+  padding: 20px;
+  margin: 0;
+}
 .info {
   display: grid;
   grid-area: info;
@@ -50,11 +60,14 @@
   color: white;
   font-size: 20px;
   text-align: center;
+
 }
 textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
-  height: 100px;
+  height: 200px;
   width: 600px;
+  
+
 }
 

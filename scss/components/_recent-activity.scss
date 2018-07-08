@@ -4,13 +4,18 @@
 // Add the information for each user as shown in the mockup, such as Member name, email address, Sign up Date etc.
 .activity {
   display: grid;
-  grid-template-columns: 80px 2fr 80px;
+  grid-template-columns: 80px 1fr 1fr;
   grid-auto-rows: minmax(80px, auto);
   grid-area: activity;
   border: 1px solid grey;
-  justify-items: left;
+  justify-self: left;
+  align-self: left;
   padding-left: 25px;
   padding:10px;
   font-size: 20px;
+}
+
+.activity-title {
+  display: grid;
 }
 
