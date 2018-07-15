@@ -1,15 +1,25 @@
 .dash {
   grid-area: dash;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid darkgray;
+  border: 2px solid grey;
 }
+
+.dash-title h4 {
+    display: grid;
+    grid-column: 3/ 5;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: grey;
+  }
 
 .dash-bar {
  display: grid;
- grid-template-columns: 120px 1fr;
+ grid-template-columns: 1fr 1fr;
  grid-auto-rows: 80px;
- justify-items: right;
-padding-top: 30px;
+ padding-top: 50px;
+ padding-left: 10px;
+ border: 1px solid grey;
 }
 
 .dash-bar p {
@@ -19,9 +29,10 @@ padding-top: 30px;
 
 }
 
-.dash-bar form input{
+.dash-bar input {
   height: 50px;
-  width: 800px;
+  width: 500px;
   border: 1px solid grey;
 }
+
 

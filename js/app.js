@@ -1,35 +1,72 @@
 
+// Get modal element
+var modal = document.getElementById('simpleModal');
+// Get open modal button
+var modalBtn = document.getElementById('modalBtn');
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-let myChart = document.getElementById('myChart').getContext('2d');
+// Listen for open click
+modalBtn.addEventListener('click', openModal);
+// Listen for close click
+closeBtn.addEventListener('click', closeModal);
+// Listen for outside click
+window.addEventListener('click', outsideClick);
+
+// Function to open modal
+function openModal(){
+  modal.style.display = 'block';
+}
+
+// Function to close modal
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+// Function to close modal if outside click
+function outsideClick(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
+
+
+
+
+
+
+
+let myChart1 = document.getElementById('myChart1').getContext('2d');
 
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#777';
 
-let massPopChart = new Chart(myChart, {
+let massPopChart = new Chart(myChart1, {
   type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
   data:{
-    labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+    labels:['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets:[{
       label:'Population',
       data:[
-        617594,
-        181045,
-        153060,
-        106519,
-        105162,
-        95072
+        75,
+        100,
+        175,
+        125,
+        225,
+        200,
+        100
       ],
       //backgroundColor:'green',
       backgroundColor:[
-        'rgba(255, 99, 132, 0.6)',
-        'rgba(54, 162, 235, 0.6)',
-        'rgba(255, 206, 86, 0.6)',
-        'rgba(75, 192, 192, 0.6)',
-        'rgba(153, 102, 255, 0.6)',
-        'rgba(255, 159, 64, 0.6)',
-        'rgba(255, 99, 132, 0.6)'
+        '#8685ad',
+        '#8685ad',
+        '#8685ad',
+        '#8685ad',
+        '#8685ad',
+        '#8685ad',
+        '#8685ad'
       ],
       borderWidth:1,
       borderColor:'#777',
@@ -40,7 +77,121 @@ let massPopChart = new Chart(myChart, {
   options:{
     title:{
       display:true,
-      text:'Largest Cities In Massachusetts',
+      text:'Daily Traffic',
+      fontSize:25
+    },
+    legend:{
+      display:true,
+      position:'right',
+      labels:{
+        fontColor:'#000'
+      }
+    },
+    layout:{
+      padding:{
+        left:50,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+  }
+});
+
+let myChart2 = document.getElementById('myChart2').getContext('2d');
+
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
+
+let mobileUser = new Chart(myChart2, {
+  type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  data:{
+    labels:['Phones', 'Tablets', 'Desktop'],
+    datasets:[{
+      label:'Population',
+      data:[
+        15,
+        15,
+        70, ],
+      //backgroundColor:'green',
+      backgroundColor:[
+        'lightgreen',
+        'cadetblue',
+        '#8685ad',
+        
+      ],
+      borderWidth:1,
+      borderColor:'#777',
+      hoverBorderWidth:3,
+      hoverBorderColor:'#000'
+    }]
+  },
+  options:{
+    title:{
+      display:true,
+      text:'Mobile Users',
+      fontSize:25
+    },
+    legend:{
+      display:true,
+      position:'right',
+      labels:{
+        fontColor:'#000'
+      }
+    },
+    layout:{
+      padding:{
+        left:50,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+  }
+});
+
+let myChart3 = document.getElementById('myChart3').getContext('2d');
+
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
+
+let traffic = new Chart(myChart3, {
+  type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  data:{
+    labels:['16-22', '23-29', '30-5', '6-12','13-19','20-26','27-3','4-10','11-17','18-24','25-31'],
+    datasets:[{
+      label:'Population',
+      data:[
+        500,
+        1000,
+        1500,
+        2000,
+        2500, 
+      ],
+      //backgroundColor:'green',
+      backgroundColor:[
+        'lavender',
+      ],
+      borderWidth:1,
+      borderColor:'#777',
+      hoverBorderWidth:3,
+      hoverBorderColor:'#000'
+    }]
+  },
+  options:{
+    title:{
+      display:true,
+      text:'Traffic',
       fontSize:25
     },
     legend:{

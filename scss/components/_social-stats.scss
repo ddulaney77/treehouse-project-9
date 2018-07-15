@@ -6,9 +6,9 @@
 #stat-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column: 2 / 5;
+  grid-column: 2/6;
   grid-row: 8;
-  margin: 4em;
+  margin: 3em;
 }
 
 
@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(200px, auto);
+  grid-row: span 3;
   grid-area: stats;
  justify-content: space-between;
  grid-gap: 25px;
@@ -25,7 +26,6 @@
 .twit, .face, .goog {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
   border: 2px darkgrey solid;
 }
 
@@ -41,11 +41,10 @@
 
 .stat-content {
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
   font-size: 24px;
   justify-items: center;
-  padding-top: 50px;
+  padding-top: 40px;
   
 }
 
@@ -85,6 +84,5 @@ span {
    text-transform: uppercase;
    color: grey;
    padding-bottom: 25px;
-   margin: 0;
-   grid-column: 1 / 4;
+   grid-column: max-content;
  }
