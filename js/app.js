@@ -1,19 +1,30 @@
 
 // Get modal element
-var modal = document.getElementById('simpleModal');
+const modal = document.getElementById('simpleModal');
 // Get open modal button
-var modalBtn = document.getElementById('modalBtn');
+const modalBtn = document.querySelector('.bell-icon');
 // Get close button
-var closeBtn = document.getElementsByClassName('closeBtn')[0];
+const closeBtn = document.getElementsByClassName('closeBtn')[0];
+const closeAlert = document.querySelectorAll('close-alert');
+
+
+
+
+
 
 // Listen for open click
 modalBtn.addEventListener('click', openModal);
+
+
 // Listen for close click
 closeBtn.addEventListener('click', closeModal);
+// closeAlert.addEventListener('click', closeModal);
+
+
 // Listen for outside click
 window.addEventListener('click', outsideClick);
 
-// Function to open modal
+// Function to open modal$$$
 function openModal(){
   modal.style.display = 'block';
 }
@@ -48,7 +59,7 @@ let massPopChart = new Chart(myChart1, {
   data:{
     labels:['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets:[{
-      label:'Population',
+      label: 'Traffic',
       data:[
         75,
         100,
@@ -59,15 +70,7 @@ let massPopChart = new Chart(myChart1, {
         100
       ],
       //backgroundColor:'green',
-      backgroundColor:[
-        '#8685ad',
-        '#8685ad',
-        '#8685ad',
-        '#8685ad',
-        '#8685ad',
-        '#8685ad',
-        '#8685ad'
-      ],
+      backgroundColor:'#8685ad',
       borderWidth:1,
       borderColor:'#777',
       hoverBorderWidth:3,
@@ -81,10 +84,10 @@ let massPopChart = new Chart(myChart1, {
       fontSize:25
     },
     legend:{
-      display:true,
+      display: false,
       position:'right',
       labels:{
-        fontColor:'#000'
+        fontColor:'#000',
       }
     },
     layout:{
@@ -92,7 +95,7 @@ let massPopChart = new Chart(myChart1, {
         left:50,
         right:0,
         bottom:0,
-        top:0
+        top:0,
       }
     },
     tooltips:{
@@ -192,10 +195,10 @@ let traffic = new Chart(myChart3, {
     title:{
       display:true,
       text:'Traffic',
-      fontSize:25
+      fontSize:22
     },
     legend:{
-      display:true,
+      display:false,
       position:'right',
       labels:{
         fontColor:'#000'
