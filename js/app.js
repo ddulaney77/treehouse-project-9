@@ -5,7 +5,38 @@ const modal = document.getElementById('simpleModal');
 const modalBtn = document.querySelector('.bell-icon');
 // Get close button
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
-const closeAlert = document.querySelectorAll('close-alert');
+
+//close individual alerts from ul li .close-alert//
+//div= .modal-body// no ul class may need to add just have class
+//for div right now//
+//span .close-alert = in each li
+
+// const closeAlert = document.querySelectorAll('.close-alert');
+
+ 
+//section =.traffic-nav // hourly-monthly charts//
+
+//const trafficHour = documet.querySelector('.hour');
+//const trafficWeek = documet.querySelector('.week');
+//const trafficDay = documet.querySelector('.day');
+//const trafficMonth = documet.querySelector('.month');
+
+//message-user section=.mess// 
+//form=.search-bar //
+//input=.search //
+//div=.use-info.//
+//textarea = #message  button=.submit-btn///////////
+//const 
+
+//send email notification/// 
+//div=.swithc-container//
+//input= #emailNotifications//
+
+//set profile to public////
+//div= .switch-container//
+//input = #profileTopublic//
+
+
 
 
 
@@ -18,6 +49,7 @@ modalBtn.addEventListener('click', openModal);
 
 // Listen for close click
 closeBtn.addEventListener('click', closeModal);
+
 // closeAlert.addEventListener('click', closeModal);
 
 

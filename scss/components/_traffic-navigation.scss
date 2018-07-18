@@ -10,13 +10,11 @@
 .traffic {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-auto-rows: 30px;
   justify-content: right;
-  grid-gap: 25px;
   border-radius: 5px;
 }
   
-.traffic a {
+.traffic li {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-auto-rows: 30px;
@@ -26,28 +24,10 @@
   padding-top: 10px;
   color: rgb(87, 85, 85);
 }
-a:hover{
+
+li:hover {
   background-color: #22af41;
   color: white;
   border-radius: 30px;
-}
-a:hover{
-  background-color: #22af41;
-  color: white;
-  border-radius: 30px;
-}
-a:hover{
-  background-color: #22af41;
-  color: white;
-  border-radius: 30px;
-}
-a:hover{
-  background-color: #22af41;
-  color: white;
-  border-radius: 30px;
-}
-a:hover {
-  background-color: #22af41;
-  color: white;
-  border-radius: 30px;
+  cursor: pointer;
 }

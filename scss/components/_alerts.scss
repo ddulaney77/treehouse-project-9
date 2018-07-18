@@ -8,7 +8,7 @@
 .alert {
   display: grid;
   grid-area: alert;
- grid-template-columns: 1fr max-content 1fr;
+ grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color:#8685ad;
   color: white;
@@ -27,7 +27,7 @@
 
 span.closeX:hover {
   cursor: pointer;
-  color: darkgrey;
+  color: rgb(73, 71, 71);
 }
 
 span.closeX {

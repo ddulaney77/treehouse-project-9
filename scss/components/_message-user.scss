@@ -36,12 +36,10 @@
 }
 
 .info input {
-  display: flex;
-  flex-direction: column;
+  
   height: 50px;
-  width: 400px;
+  width: 525px;
   border: 1px solid lightgrey;
-  margin: auto;
   border-radius: 5px;
 }
  
@@ -56,17 +54,13 @@
   color: white;
   font-size: 20px;
   text-align: center;
-  margin-left: 20px;
 }
 
 textarea {
-  // display: flex;
-  // flex-direction: column;
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
   width: 524px;
   margin: auto;
-
 }
 
