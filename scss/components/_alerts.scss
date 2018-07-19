@@ -10,18 +10,18 @@
   grid-area: alert;
  grid-template-columns: 100px max-content 1fr;
   padding: 20px;
-  background-color:#8685ad;
-  color: white;
+  background-color: $color-primary;
+  color: $white;
 
 }
 .alert span{
-  color: white;
+  color: $white;
   font-size: 36px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .alert p {
   padding-top: 15px;
-  color: white;
+  color: $white;
   font-size: 22px;
 }
 

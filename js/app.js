@@ -6,14 +6,16 @@ const modalBtn = document.querySelector('.bell-icon');
 // Get close button
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-//close individual alerts from ul li .close-alert//
-//div= .modal-body// no ul class may need to add just have class
-//for div right now//
-//span .close-alert = in each li
+//close individual alerts from ul .alert-list
 
-// const closeAlert = document.querySelectorAll('.close-alert');
+// target ul and li items
+// const alertList = document.querySelector('.alert-list ul');
+// const listItems = myList.querySelectorAll( '.close-alert span' );
+//const modalBody = document.querySelector('.modal-body');
 
- 
+
+
+
 //section =.traffic-nav // hourly-monthly charts//
 
 //const trafficHour = documet.querySelector('.hour');
@@ -21,8 +23,16 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 //const trafficDay = documet.querySelector('.day');
 //const trafficMonth = documet.querySelector('.month');
 
+// const trafficList = document.querySelector('.traffic ul');
+//const trafficItems = document.querySelectorAll('li');
+
+
+
+
 //message-user section=.mess// 
 //form=.search-bar //
+//const userSearch = document.querySelector('.search-bar form');
+//const
 //input=.search //
 //div=.use-info.//
 //textarea = #message  button=.submit-btn///////////
@@ -49,8 +59,7 @@ modalBtn.addEventListener('click', openModal);
 
 // Listen for close click
 closeBtn.addEventListener('click', closeModal);
-
-// closeAlert.addEventListener('click', closeModal);
+// listItems.addEventListener('click', closeModal);
 
 
 // Listen for outside click

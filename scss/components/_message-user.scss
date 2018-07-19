@@ -20,7 +20,7 @@
   grid-column: 2 / 3;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: grey;
+  color: $grey;
   margin: 0;
 
 }
@@ -48,10 +48,10 @@
  
   height: 50px;
   width: 525px;
-  background-color: #8685ad;
+  background-color: $color-primary;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  color: white;
+  color: $white;
   font-size: 20px;
   text-align: center;
 }

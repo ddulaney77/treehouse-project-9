@@ -21,7 +21,7 @@ grid-column: 1/ 5;
 font-size: 18px;
 font-family: Arial, Helvetica, sans-serif;
 text-transform: uppercase;
-color: grey;
+color: $grey;
 padding: 20px;
 margin: 0;
 }
@@ -30,7 +30,7 @@ margin: 0;
   height: 50px;
   width: 275px;
   border-radius:5px;
-  background-color: #8685ad;
+  background-color: $color-primary;
   margin-top: auto;
   color: white;
   font-size: 20px;
@@ -43,7 +43,7 @@ margin: 0;
   border-radius:5px;
   background-color: darkgrey;
    margin-top: auto;
-   color: white;
+   color: $white;
    font-size: 20px;
 
 } 

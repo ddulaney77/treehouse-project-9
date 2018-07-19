@@ -328,7 +328,7 @@ h4 {
   margin: auto; }
 
 .main span {
-  color: white;
+  color: #fff;
   font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
@@ -346,7 +346,7 @@ h4 {
 
 .avatar p {
   font-size: 16px;
-  color: white;
+  color: #fff;
   padding: 0; }
 
 @keyframes modalopen {
@@ -396,7 +396,7 @@ h4 {
   cursor: pointer; }
 
 .modal li {
-  color: white;
+  color: #fff;
   font-size: 24px;
   border: 1px solid white;
   padding-left: 15px; }
@@ -439,7 +439,7 @@ p {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: grey; }
+  color: #878787; }
 
 .dash-bar {
   display: grid;
@@ -450,7 +450,7 @@ p {
 
 .dash-bar p {
   font-size: 24px;
-  color: grey;
+  color: #878787;
   font-family: Arial, Helvetica, sans-serif; }
 
 .dash-bar input {
@@ -465,16 +465,16 @@ p {
   grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color: #8685ad;
-  color: white; }
+  color: #fff; }
 
 .alert span {
-  color: white;
+  color: #fff;
   font-size: 36px;
   font-family: Arial, Helvetica, sans-serif; }
 
 .alert p {
   padding-top: 15px;
-  color: white;
+  color: #fff;
   font-size: 22px; }
 
 span.closeX:hover {
@@ -636,7 +636,7 @@ span.gt {
   grid-column: 2 / 3;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: grey;
+  color: #878787;
   margin: 0; }
 
 .search input {
@@ -660,7 +660,7 @@ span.gt {
   background-color: #8685ad;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  color: white;
+  color: #fff;
   font-size: 20px;
   text-align: center; }
 
@@ -685,7 +685,7 @@ textarea {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: grey;
+  color: #878787;
   padding: 20px;
   margin: 0; }
 
@@ -704,7 +704,7 @@ textarea {
   border-radius: 5px;
   background-color: darkgrey;
   margin-top: auto;
-  color: white;
+  color: #fff;
   font-size: 20px; }
 
 #timeZone {

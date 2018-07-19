@@ -6,7 +6,7 @@
   grid-template-columns: 1fr 80px 150px;
   grid-auto-rows: 75px;
   grid-area: main;
-  background-color: #8685ad;
+  background-color: $color-primary;
 }
 
 .bell-icon {
@@ -20,7 +20,7 @@
 }
 
 .main span {
-  color: white;
+  color: $white;
   font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -41,7 +41,7 @@
 
 .avatar p {
   font-size: 16px;
-  color: white;
+  color: $white;
   padding: 0;
 }
 
@@ -73,35 +73,35 @@
     margin:0;
   }
   &-header{
-    background:#a09ed1;
+    background: $color-secondary;
     padding:5px;
-    color:#fff;
+    color: $white;
   }
   &-body{
     background-color: darkgrey;
     padding:10px;
   }
   &-footer{
-    background: #a09ed1;
+    background: $color-secondary;
     padding:5px;
-    color:#fff;
+    color: $white;
   }
   .closeBtn {
     color:#ccc;
     float: right;
     font-size:27px;
-    color:#fff;
+    color: $white;
   }
 }
   .closeBtn:hover,
   .closeBtn:focus {
-    color:#000;
+    color: $black;
     text-decoration: none;
     cursor:pointer;
   }
 
 .modal li {
-  color: white;
+  color: $white;
   font-size: 24px;
   border: 1px solid white;
   padding-left: 15px;
