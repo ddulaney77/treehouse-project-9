@@ -24,12 +24,8 @@
 
 }
 // Create a field for searching for a user.
-.search input {
-  height: 50px;
-  width: 600px;
-}
+
 .info {
- 
   display: grid;
   grid-area: info;
   justify-content: left;
@@ -49,7 +45,7 @@
 }
 .use-info button {
   height: 50px;
-  width: 100%;
+  width: 700px;
   background-color: $color-primary;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -62,7 +58,6 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 524px;
-  margin: auto;
+  width: 700px;
 }
 
