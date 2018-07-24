@@ -2,17 +2,20 @@
 // Create widgets that lists users for both widgets.
 // Include avatars for each member (You can search for a “random user generator” like https://randomuser.me/photos or find some some pictures elsewhere).
 // Add the information for each user as shown in the mockup, such as Member name, email address, Sign up Date etc.
-.activity {
-  display: grid;
-  grid-template-columns: 80px max-content 1fr;
-  grid-area: activity;
-  border: 1px solid grey;
-  padding-left: 25px;
-  // padding:10px;
-  font-size: 20px;
-}
 
- span.gt {
+
+
+.activity {
+ display: grid;
+ grid-template-columns: 100px 1fr 1fr;
+ grid-area: activity;
+ border: 1px solid grey;
+ padding-left: 25px;
+ font-size: 20px;
+ justify-self: center;
+ justify-items: center;
+ padding: 40px;
+}
+span.gt {
   font-size: 30px;
  }
-

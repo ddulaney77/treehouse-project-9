@@ -8,6 +8,7 @@
 
 
 .mess {
+  margin-left: 30px;
   display: grid;
   grid-area: mess;
 }
@@ -28,24 +29,27 @@
   width: 600px;
 }
 .info {
+ 
   display: grid;
   grid-area: info;
   justify-content: left;
 }
 
-.info input {
-  
+#searchMess input {
   height: 50px;
-  width: 525px;
+  width: 700px;
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
  
-
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
 .use-info button {
- 
   height: 50px;
-  width: 525px;
+  width: 100%;
   background-color: $color-primary;
   border: 1px solid lightgrey;
   border-radius: 5px;
