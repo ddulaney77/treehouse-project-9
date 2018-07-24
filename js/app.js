@@ -1,4 +1,4 @@
-
+                  // modal and  notifications//
 // Get modal element
 const modal = document.getElementById('simpleModal');
 // Get open modal button
@@ -7,8 +7,8 @@ const modalBtn = document.querySelector('.bell-icon');
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 //close individual alerts from ul .alert-list
+// target ul and li items in modal
 
-// target ul and li items
 // const alertList = document.querySelector('.alert-list ul');
 // const listItems = myList.querySelectorAll( '.close-alert span' );
 //const modalBody = document.querySelector('.modal-body');
@@ -16,8 +16,9 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
 
-//section =.traffic-nav // hourly-monthly charts//
+              //section =.traffic-nav // hourly-monthly charts//
 
+// target each one to get a new chart??//
 //const trafficHour = documet.querySelector('.hour');
 //const trafficWeek = documet.querySelector('.week');
 //const trafficDay = documet.querySelector('.day');
@@ -29,17 +30,38 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
 
-//message-user section=.mess// 
+                      //message-user section=.mess// 
+//div = .info//
+
+//search bar form =.search-b//
+//const searchB = document.querySelector('.search-b');
+
+//input - .searchMess//
+//const messageSearch = document.querySelector('.searchMess');
+
+                          ///dashboard search bar//
 //form=.search-bar //
 //const userSearch = document.querySelector('.search-bar form');
-//const
-//input=.search //
-//div=.use-info.//
-//textarea = #message  button=.submit-btn///////////
-//const 
 
+
+//input=.search //
+//const dashSearch = document.querySelector('.search input');
+
+//div=.use-info.//
+// const useInfo = document.querySelector('.use-info');
+
+
+//button=.submit-btn//
+//const messageButton = document.querySelector('.submit-btn button');
+
+//textarea = #message  //
+//const textArea = document.getElementById('#message');
+
+
+
+                      //settings section///
 //send email notification/// 
-//div=.swithc-container//
+//div=.switch-container//
 //input= #emailNotifications//
 
 //set profile to public////
@@ -53,29 +75,24 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
 
-// Listen for open click
+// Listen for open click in modal
 modalBtn.addEventListener('click', openModal);
 
-
-// Listen for close click
+// Listen for close click in modal
 closeBtn.addEventListener('click', closeModal);
 // listItems.addEventListener('click', closeModal);
 
-
-// Listen for outside click
+// Listen for outside click in modal window
 window.addEventListener('click', outsideClick);
-
-// Function to open modal$$$
+// Function to open modal//
 function openModal(){
   modal.style.display = 'block';
 }
-
-// Function to close modal
+// Function to close modal//
 function closeModal(){
   modal.style.display = 'none';
 }
-
-// Function to close modal if outside click
+// Function to close modal if outside click//
 function outsideClick(e){
   if(e.target == modal){
     modal.style.display = 'none';
@@ -95,7 +112,7 @@ Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#777';
 
-let massPopChart = new Chart(myChart1, {
+let dailyTraffic = new Chart(myChart1, {
   type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
   data:{
     labels:['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -110,7 +127,6 @@ let massPopChart = new Chart(myChart1, {
         200,
         100
       ],
-      //backgroundColor:'green',
       backgroundColor:'#8685ad',
       borderWidth:1,
       borderColor:'#777',
@@ -162,7 +178,6 @@ let mobileUser = new Chart(myChart2, {
         15,
         15,
         70, ],
-      //backgroundColor:'green',
       backgroundColor:[
         'lightgreen',
         'cadetblue',
@@ -222,7 +237,6 @@ let traffic = new Chart(myChart3, {
         2000,
         2500, 
       ],
-      //backgroundColor:'green',
       backgroundColor:[
         'lavender',
       ],
@@ -258,3 +272,52 @@ let traffic = new Chart(myChart3, {
     }
   }
 });
+
+////////// chart info //////////
+
+/*let dailyChart = document.getElementById('.daily-chart').getContext('2d');
+//let hourlyChart = document.getElementById('.hourly-chart').getContext('2d');
+//let weeklyChart = document.getElementById('.weekly-chart').getContext('2d');
+//let monthlyChart = document.getElementById('.monthly-chart').getContext('2d');
+
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
+
+////////// update chart info //////////
+
+// setTimeout(function() {
+//   addData(hourlyChart, [45, 50, 30, 34, 61, 53, 42], 0);
+// }, 2000);
+
+// function addData(chart, data, datasetIndex) {
+//   chart.data.datasets[datasetIndex].data = data;
+//   chart.update();
+// }
+
+// setTimeout(function() {
+//   addData(dailyChart, [45, 50, 30, 34, 61, 53, 42], 0);
+// }, 2000);
+
+// function addData(chart, data, datasetIndex) {
+//   chart.data.datasets[datasetIndex].data = data;
+//   chart.update();
+// }
+// setTimeout(function() {
+//   addData(chart, [45, 50, 30, 34, 61, 53, 42], 0);
+// }, 2000);
+
+// function addData(chart, data, datasetIndex) {
+//   chart.data.datasets[datasetIndex].data = data;
+//   chart.update();
+// }
+
+// setTimeout(function() {
+//   addData(monthlyChart, [45, 50, 30, 34, 61, 53, 42], 0);
+// }, 2000);
+
+// function addData(chart, data, datasetIndex) {
+//   chart.data.datasets[datasetIndex].data = data;
+//   chart.update();
+// }

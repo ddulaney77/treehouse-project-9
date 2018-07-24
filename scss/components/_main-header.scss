@@ -21,13 +21,16 @@
 
 .main span {
   color: $white;
-  font-size: 22px;
+  font-size: 25px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 10px;
 }
-
+ .main span:hover {
+   cursor: pointer;
+ }
 .main p{
   padding: 10px 30px;
-  font-size: 34px;
+  font-size: 26px;
   color: lightgrey;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -76,6 +79,7 @@
     background: $color-secondary;
     padding:5px;
     color: $white;
+    text-align: center;
   }
   &-body{
     background-color: darkgrey;
@@ -110,4 +114,8 @@
 .modal ul {
   margin: 0;
   padding: 0;
+}
+
+.close-alert {
+  float: right;
 }
