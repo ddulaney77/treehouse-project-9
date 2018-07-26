@@ -3,7 +3,12 @@
 // Include avatars for each member (You can search for a “random user generator” like https://randomuser.me/photos or find some some pictures elsewhere).
 // Add the information for each user as shown in the mockup, such as Member name, email address, Sign up Date etc.
 
-
+//settings options:
+/*An on/off widget for whether to send email notifications.
+An on/off widget for whether to set profile to public or private.
+A dropdown to select timezone options.
+Save and Cancel buttons (these do not have to do anything functional).
+Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
 
 .activity {
  display: grid;

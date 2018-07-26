@@ -4,7 +4,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 80px 150px;
-  grid-auto-rows: 75px;
+  padding: 20px;
   grid-area: main;
   background-color: $color-primary;
 }
@@ -19,18 +19,16 @@
   margin: auto;
 }
 
-.main span {
+.main sub{
   color: $white;
-  font-size: 25px;
+  font-size: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-right: 10px;
+  padding-right: 10px 30px;
 }
- .main span:hover {
-   cursor: pointer;
- }
+
 .main p{
   padding: 10px 30px;
-  font-size: 26px;
+  font-size: 40px;
   color: lightgrey;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -110,7 +108,10 @@
   border: 1px solid white;
   padding-left: 15px;
 }
-
+.modal li:hover {
+  background-color: limegreen;
+  border-radius: 10px;
+}
 .modal ul {
   margin: 0;
   padding: 0;
@@ -118,4 +119,31 @@
 
 .close-alert {
   float: right;
+}
+.close-alert span{
+  
+  font-size: 22px;
+}
+.close-alert:hover {
+  cursor: pointer;
+}
+
+.badge1 {
+  grid-column: 2;
+  position:relative;
+}
+.badge1[data-badge]:after {
+  content:attr(data-badge);
+  position:absolute;
+  top:-60px;
+  right: 15px;
+  font-size:1em;
+  background:limegreen;
+  color:white;
+  width:20px;
+  height:20px;
+  text-align:center;
+  line-height:18px;
+  border-radius:50%;
+  box-shadow:0 0 1px #333;
 }

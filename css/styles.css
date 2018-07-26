@@ -314,7 +314,7 @@ h4 {
 .main {
   display: grid;
   grid-template-columns: 1fr 80px 150px;
-  grid-auto-rows: 75px;
+  padding: 20px;
   grid-area: main;
   background-color: #8685ad; }
 
@@ -327,18 +327,15 @@ h4 {
   justify-self: flex-end;
   margin: auto; }
 
-.main span {
+.main sub {
   color: #fff;
-  font-size: 25px;
+  font-size: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-right: 10px; }
-
-.main span:hover {
-  cursor: pointer; }
+  padding-right: 10px 30px; }
 
 .main p {
   padding: 10px 30px;
-  font-size: 26px;
+  font-size: 40px;
   color: lightgrey;
   font-family: 'Times New Roman', Times, serif; }
 
@@ -406,12 +403,41 @@ h4 {
   border: 1px solid white;
   padding-left: 15px; }
 
+.modal li:hover {
+  background-color: limegreen;
+  border-radius: 10px; }
+
 .modal ul {
   margin: 0;
   padding: 0; }
 
 .close-alert {
   float: right; }
+
+.close-alert span {
+  font-size: 22px; }
+
+.close-alert:hover {
+  cursor: pointer; }
+
+.badge1 {
+  grid-column: 2;
+  position: relative; }
+
+.badge1[data-badge]:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: -60px;
+  right: 15px;
+  font-size: 1em;
+  background: limegreen;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333; }
 
 .container {
   display: grid;
@@ -523,7 +549,7 @@ span.closeX {
   padding-top: 10px;
   color: #575555; }
 
-li:hover {
+.traffic li:hover {
   background-color: #22af41;
   color: white;
   border-radius: 30px;
@@ -576,7 +602,7 @@ li:hover {
   padding-top: 40px; }
 
 .stat-content p {
-  font-size: 30px;
+  font-size: 32px;
   color: darkgrey; }
 
 .twit-icon {
@@ -601,8 +627,8 @@ li:hover {
   padding-top: 20px;
   padding-left: 15px; }
 
-span {
-  font-size: 50px;
+.numbers span {
+  font-size: 60px;
   color: darkgrey; }
 
 #stat-wrapper h4 {
@@ -612,6 +638,9 @@ span {
   color: grey;
   padding-bottom: 25px;
   grid-column: max-content; }
+
+strong {
+  font-size: 46px; }
 
 img {
   display: block;
@@ -633,6 +662,11 @@ img {
   grid-gap: 10px;
   padding: 40px; }
 
+/*An on/off widget for whether to send email notifications.
+An on/off widget for whether to set profile to public or private.
+A dropdown to select timezone options.
+Save and Cancel buttons (these do not have to do anything functional).
+Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
 .activity {
   display: grid;
   grid-template-columns: 100px 1fr 1fr;
@@ -668,7 +702,7 @@ span.gt {
 
 #searchMess input {
   height: 50px;
-  width: 700px;
+  width: 400px;
   border: 1px solid lightgrey;
   border-radius: 5px; }
 
@@ -679,7 +713,7 @@ span.gt {
 
 .use-info button {
   height: 50px;
-  width: 700px;
+  width: 400px;
   background-color: #8685ad;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -691,7 +725,7 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 700px; }
+  width: 400px; }
 
 .set {
   display: grid;
@@ -711,12 +745,11 @@ textarea {
 .save-btn,
 .cancel-btn {
   height: 50px;
-  width: 275px;
+  width: 350px;
   border-radius: 5px;
-  margin: #fff;
-  margin: auto;
-  color: 4;
-  font-size: 20px; }
+  margin-left: 30px;
+  font-size: 24px;
+  color: white; }
 
 .save-btn {
   background-color: #8685ad; }

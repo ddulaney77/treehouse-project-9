@@ -25,12 +25,11 @@ margin: 0;
 .save-btn,
 .cancel-btn {
   height: 50px;
-  width: 275px;
-  border-radius:5px;
-  margin: $white;
-  margin: auto;
-  color: 4;
-  font-size: 20px;
+  width: 350px;
+  border-radius: 5px;
+  margin-left: 30px;
+  font-size: 24px;
+  color: white;
 }
 .save-btn{
   background-color: $color-primary;

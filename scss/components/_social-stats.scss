@@ -45,7 +45,7 @@
   
 }
 .stat-content p {
-  font-size: 30px;
+  font-size: 32px;
   color: darkgrey;
 }
 
@@ -73,8 +73,8 @@
   padding-left: 15px;
 }
 
-span {
-  font-size: 50px;
+.numbers span {
+  font-size: 60px;
   color: darkgrey;
 }
 
@@ -85,4 +85,7 @@ span {
    color: grey;
    padding-bottom: 25px;
    grid-column: max-content;
+ }
+ strong {
+   font-size: 46px;
  }
