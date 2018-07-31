@@ -327,6 +327,9 @@ h4 {
   justify-self: flex-end;
   margin: auto; }
 
+.bell-icon:hover {
+  cursor: pointer; }
+
 .main sub {
   color: lightgrey;
   font-size: 40px;
@@ -346,9 +349,13 @@ h4 {
   margin: auto; }
 
 .avatar p {
-  font-size: 16px;
-  color: #fff;
+  font-size: 18px;
+  color: #ddc249;
   padding: 0; }
+
+.avatar p:hover {
+  color: white;
+  cursor: pointer; }
 
 @keyframes modalopen {
   from {
@@ -365,7 +372,7 @@ h4 {
   overflow: auto;
   margin-left: 65%; }
   .modal-content {
-    background-color: #f4f4f4;
+    background-color: #514596;
     width: 62%;
     animation-name: modalopen;
     animation-duration: 1s;
@@ -379,7 +386,7 @@ h4 {
     color: #fff;
     text-align: center; }
   .modal-body {
-    background-color: darkgrey;
+    background-color: #514596;
     padding: 10px; }
   .modal-footer {
     background: #a09ed1;
@@ -476,7 +483,7 @@ p {
 
 .dash-bar {
   margin: 20px;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 150px 1fr;
   display: grid; }
 
 .dash-bar input {
@@ -485,7 +492,10 @@ p {
   width: 60%;
   border: 1px solid grey; }
 
-.mag-glass {
+.dash-bar input:hover {
+  cursor: pointer; }
+
+img #mag-glass {
   margin: auto;
   height: 35px;
   width: 35px;
@@ -594,12 +604,10 @@ span.closeX {
 
 .stat-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 24px;
-  justify-items: center;
-  padding-top: 40px; }
+  grid-template-columns: repeat(2, 1fr); }
 
 .stat-content p {
+  text-align: center;
   font-weight: 500;
   font-size: 32px;
   color: #8685ad; }
@@ -635,9 +643,9 @@ span.closeX {
   grid-column: max-content; }
 
 strong {
-  color: lightgrey;
+  color: grey;
   font-size: 60px;
-  font-weight: 300; }
+  font-weight: 100; }
 
 img {
   display: block;
@@ -702,6 +710,9 @@ span.gt {
   border: 1px solid lightgrey;
   border-radius: 5px; }
 
+#searchMess:hover {
+  cursor: pointer; }
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
@@ -718,11 +729,17 @@ span.gt {
   font-size: 20px;
   text-align: center; }
 
+.submit-btn:hover {
+  cursor: pointer; }
+
 #message {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
   width: 100%; }
+
+#message:hover {
+  cursor: pointer; }
 
 .set {
   display: grid;
@@ -753,10 +770,17 @@ span.gt {
 .cancel-btn {
   background-color: darkgrey; }
 
+.save-btn:hover,
+.cancel-btn:hover {
+  cursor: pointer; }
+
 #timeZone {
   border: 1px solid grey;
   height: 60px;
   width: 100%; }
+
+#timeZone:hover {
+  cursor: pointer; }
 
 .switch-container span {
   font-size: 26px;
@@ -776,5 +800,23 @@ li.notify {
 .submits {
   margin-top: 70px;
   margin-left: 20px; }
+
+.switch-light.switch-material a {
+  background-color: #ddc249; }
+
+.switch-light.switch-material a:hover {
+  cursor: pointer; }
+
+.switch-material.switch-light > span {
+  background: #a2a2d0; }
+
+.switch-material.switch-light > span:hover {
+  cursor: pointer; }
+
+.switch-material.switch-light input:checked ~ span a {
+  background: #86d886; }
+
+.switch-material.switch-light input:checked ~ span a:hover {
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

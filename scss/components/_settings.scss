@@ -36,6 +36,11 @@ margin: 0;
 .cancel-btn {
   background-color: darkgrey;
 } 
+
+.save-btn:hover,
+.cancel-btn:hover{
+  cursor: pointer;
+}
 // Create a dropdown to select timezone.
 #timeZone {
   border: 1px solid grey;
@@ -43,13 +48,18 @@ margin: 0;
   width: 100%;
 }
 
-
+#timeZone:hover{
+  cursor: pointer;
+}
 .switch-container span {
   // height: 50px;
   // width: 50px;
   font-size: 26px;
   color: $grey;
 }
+
+
+
 
 li.public,
 li.notify{
@@ -67,4 +77,25 @@ li.notify{
 .submits {
   margin-top: 70px;
   margin-left: 20px;
+}
+.switch-light.switch-material a {
+  background-color: rgb(221, 194, 73);
+
+}
+
+.switch-light.switch-material a:hover {
+  cursor: pointer;
+}
+
+.switch-material.switch-light > span {
+  background: #a2a2d0;
+}
+.switch-material.switch-light > span:hover{
+  cursor: pointer;
+}
+.switch-material.switch-light input:checked ~ span a {
+  background:rgb(134, 216, 134);
+}
+.switch-material.switch-light input:checked ~ span a:hover {
+  cursor: pointer;
 }

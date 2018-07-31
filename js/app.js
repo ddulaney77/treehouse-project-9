@@ -44,6 +44,7 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
 //// message user form//////
+//Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.//
 
 //button=.submit-btn//
 //const messageButton = document.querySelector('.submit-btn button');
@@ -90,10 +91,10 @@ function outsideClick(e){
               //section =.traffic-nav // hourly-monthly charts//
 ///////use let for variabes that will have new data and info////
 
-// let dailyChart = document.querySelector('.daily').getContext('2d');
-// let hourlyChart = document.querySelector('.hourly').getContext('2d');
-// let weeklyChart = document.querySelector('.weekly').getContext('2d');
-// let monthlyChart = document.querySelector('.monthly').getContext('2d');
+// let dailyChart = document.querySelector('.day').getContext('2d');
+// let hourlyChart = document.querySelector('.hour').getContext('2d');
+// let weeklyChart = document.querySelector('.week').getContext('2d');
+// let monthlyChart = document.querySelector('.month).getContext('2d');
 
 // const trafficList = document.querySelector('.traffic ul');
 // const trafficItems = document.querySelectorAll('li');

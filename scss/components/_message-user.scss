@@ -38,7 +38,9 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
- 
+ #searchMess:hover {
+   cursor: pointer;
+ }
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
@@ -55,6 +57,9 @@
   font-size: 20px;
   text-align: center;
 }
+.submit-btn:hover {
+  cursor: pointer;
+}
 // Add a message textarea field that lets you add a message.
 #message {
   border: 1px solid lightgrey;
@@ -63,3 +68,6 @@
   width: 100%;
 }
 
+#message:hover {
+  cursor: pointer;
+}
