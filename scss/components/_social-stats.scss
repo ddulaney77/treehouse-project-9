@@ -45,10 +45,11 @@
   
 }
 .stat-content p {
+  font-weight: 500;
   font-size: 32px;
-  color: darkgrey;
+  color:#8685ad ;
 }
-
+ 
 .twit-icon {
   max-width: 100%;
   height: 80px;
@@ -73,10 +74,10 @@
   padding-left: 15px;
 }
 
-.numbers span {
-  font-size: 60px;
-  color: darkgrey;
-}
+// .numbers span {
+//   font-size: 60px;
+//   color: darkgrey;
+// }
 
   #stat-wrapper h4 {
    font-size: 18px;
@@ -87,5 +88,7 @@
    grid-column: max-content;
  }
  strong {
-   font-size: 46px;
+   color: lightgrey;
+   font-size: 60px;
+    font-weight: 300;
  }

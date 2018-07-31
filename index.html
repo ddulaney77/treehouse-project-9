@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web App Dashboard</title>
+  <link rel="stylesheet" href="css/css-toggle-switch-master/dist/toggle-switch.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
@@ -13,8 +14,8 @@
 <Section class="container">
 
   <div class="main">
-    <p><sub>Your</sub>
-    App</p>
+    <p>Your<sub>App</sub></p>
+    
   
     <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -143,19 +144,15 @@
 </div>
 
 <section class="dash">
-  <div class="dash-title">
-      <h4>Dashboard</h4>
-  </div>
+
 <div class="dash-bar">
-  
+    <h4>Dashboard</h4>
   <form class="search-bar" action ="index.html" method="post">
     <input class="search" type="text" placeholder="search...">
-
   <?xml version="1.0" encoding="UTF-8"?>
     <!-- This Source Code Form is subject to the terms of the Mozilla Public
        - License, v. 2.0. If a copy of the MPL was not distributed with this
        - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-
   </form>
 </div>
 
@@ -359,14 +356,12 @@
 <section class="mess">
         <h4>Message User</h4>
         <form class="search-b" autocomplete="off" action ="index.html" method="post">
-    <div class="info autocomplete">
-          <input id="searchMess" type="text" placeholder="Search for User">
-        </form>
-       
-<div class="use-info">
-    <label></label>
+            <div class="info autocomplete">
+              <input id="searchMess" type="text" placeholder="Search for User">
+              </div>
   <textarea id="message" name="user_message" placeholder="Message for User"></textarea>
   <button class="submit-btn" type="submit">Send</button>
+</form>
 </div>
 </div>
 </section>
@@ -404,7 +399,6 @@
           </label>
         </div>
       </li>
-      </ul>
       <li>
         <select id="timeZone">
           <option value="" selected disabled>Select Timezone</option>

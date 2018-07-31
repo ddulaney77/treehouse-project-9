@@ -13,14 +13,15 @@
   grid-area: mess;
 }
 
-.mess-title h4{
-  text-align: center;
+.mess h4{
+
   font-size: 18px;
-  grid-column: 2 / 3;
+  grid-column: 1/2;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: $grey;
   margin: 0;
+  padding-top: 40px;
 
 }
 // Create a field for searching for a user.
@@ -31,9 +32,9 @@
   justify-content: left;
 }
 
-#searchMess input {
-  height: 50px;
-  width: 400px;
+#searchMess {
+  height: 100px;
+  width: 100%;
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
@@ -42,10 +43,11 @@
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
+  width: 100%;
 }
-.use-info button {
+.submit-btn  {
   height: 50px;
-  width: 400px;
+  width: 100%;
   background-color: $color-primary;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -54,10 +56,10 @@
   text-align: center;
 }
 // Add a message textarea field that lets you add a message.
-textarea {
+#message {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 400px;
+  width: 100%;
 }
 

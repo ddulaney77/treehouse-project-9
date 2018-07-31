@@ -7,22 +7,6 @@ const modalBtn = document.querySelector('.bell-icon');
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
-
-              //section =.traffic-nav // hourly-monthly charts//
-
-// const dailyChart = document.querySelector('.daily').getContext('2d');
-// const hourlyChart = document.querySelector('.hourly').getContext('2d');
-// const weeklyChart = document.querySelector('.weekly').getContext('2d');
-// const monthlyChart = document.querySelector('.monthly').getContext('2d');
-
-// const trafficList = document.querySelector('.traffic ul');
-// const trafficItems = document.querySelectorAll('li');
-
-
-
-
-
-
 //close individual alerts from ul .alert-list//////
 // target ul and li items in modal/////
 
@@ -32,32 +16,17 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 
 
-
-
                           ///dashboard search bar//
 //form=.search-bar //
 //const userSearch = document.querySelector('.search-bar form');
 
-
 //input=.search //
 //const dashSearch = document.querySelector('.search input');
-
-//div=.use-info.//
-// const useInfo = document.querySelector('.use-info');
-
-
-//button=.submit-btn//
-//const messageButton = document.querySelector('.submit-btn button');
-
-//textarea = #message  //
-//const textArea = document.getElementById('#message');
 
 
 
                       //settings section///
 //send email notification/// 
-
-
 //div=.switch-container//
 //const switchContainer = document.querySelector(".switch-container");
 
@@ -69,6 +38,29 @@ const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 //input = #profileTopublic//
 //const profileTpPublic = document.getElementById("profileToPublic");
+
+
+
+
+
+//// message user form//////
+
+//button=.submit-btn//
+//const messageButton = document.querySelector('.submit-btn button');
+
+//textarea = #message  //
+//const textArea = document.getElementById('#message');
+// const textAreaInput = form.querySelector('textarea');
+//const  messInput = form.querySelector('input'); 
+
+
+///section form is in = .mess////
+//const formSection = document.querySelector('.mess');
+
+//div for form = .search-b includes input for search bar and textarea/////
+// const formInput = document.querySelector('.search-b");
+
+
 
 
 // Listen for open click in modal
@@ -95,7 +87,28 @@ function outsideClick(e){
   }
 }
 
+              //section =.traffic-nav // hourly-monthly charts//
+///////use let for variabes that will have new data and info////
 
+// let dailyChart = document.querySelector('.daily').getContext('2d');
+// let hourlyChart = document.querySelector('.hourly').getContext('2d');
+// let weeklyChart = document.querySelector('.weekly').getContext('2d');
+// let monthlyChart = document.querySelector('.monthly').getContext('2d');
+
+// const trafficList = document.querySelector('.traffic ul');
+// const trafficItems = document.querySelectorAll('li');
+
+
+//create new charts, lables and data for daily, hourly, weekly,monthy in new arrays
+
+///create if statements for:
+//if user clicks '.daily' (dailyChart)- update data to dailyData, dailyLabel
+
+
+
+//if user clicks '.hourly' (hourlyChart)-update data to hourlyData, hourlyLabel
+//if user clicks '.weekly' (weeklyChart)-update data to weeklyData, weeklyLabel
+// if user clicks '.monthly' (monthlyCahrt) -update data to monthlyData, monthlyLabel
 
 
 let myChart1 = document.getElementById('myChart1').getContext('2d');
@@ -422,6 +435,7 @@ let traffic = new Chart(myChart3, {
 
 //  function memberNames() {
 //   let listOfNames = [];
+
 //   for (let name = 0; name < memberList.length; name++) {
 //     let memberName = memberList[name].textContent;
 //     listOfNames.push(memberName);
@@ -430,6 +444,10 @@ let traffic = new Chart(myChart3, {
 //     }
 //   }
 // }
+
+
+//re-write as forEach function //
+//memberNames.forEach(memberName => )
 
 // // Call autocomplete function
 // let membersListArray = memberNames();

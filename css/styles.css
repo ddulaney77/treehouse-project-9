@@ -328,7 +328,7 @@ h4 {
   margin: auto; }
 
 .main sub {
-  color: #fff;
+  color: lightgrey;
   font-size: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-right: 10px 30px; }
@@ -336,7 +336,7 @@ h4 {
 .main p {
   padding: 10px 30px;
   font-size: 40px;
-  color: lightgrey;
+  color: white;
   font-family: 'Times New Roman', Times, serif; }
 
 .avatar {
@@ -464,39 +464,37 @@ p {
 
 .dash {
   grid-area: dash;
-  grid-template-columns: 1fr 1fr;
   border: 2px solid grey; }
 
-.dash-title h4 {
+.dash-bar h4 {
   display: grid;
-  grid-column: 3/ 5;
+  grid-column: 1;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #878787; }
 
 .dash-bar {
-  display: grid;
-  grid-auto-rows: 80px;
-  padding-top: 30px;
-  border: 1px solid grey;
-  justify-content: right; }
-
-.dash-bar p {
-  font-size: 24px;
-  color: #878787;
-  font-family: Arial, Helvetica, sans-serif; }
+  margin: 20px;
+  grid-template-columns: 250px 1fr;
+  display: grid; }
 
 .dash-bar input {
+  margin: 10px;
   height: 50px;
-  width: 500px;
-  border: 1px solid grey;
-  justify-content: right; }
+  width: 60%;
+  border: 1px solid grey; }
 
 .mag-glass {
   margin: auto;
   height: 35px;
   width: 35px;
+  border: 1px solid grey; }
+
+form.search-bar {
+  height: 70px;
+  margin: 10px;
+  text-align: end;
   border: 1px solid grey; }
 
 .alert {
@@ -602,8 +600,9 @@ span.closeX {
   padding-top: 40px; }
 
 .stat-content p {
+  font-weight: 500;
   font-size: 32px;
-  color: darkgrey; }
+  color: #8685ad; }
 
 .twit-icon {
   max-width: 100%;
@@ -627,10 +626,6 @@ span.closeX {
   padding-top: 20px;
   padding-left: 15px; }
 
-.numbers span {
-  font-size: 60px;
-  color: darkgrey; }
-
 #stat-wrapper h4 {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
@@ -640,7 +635,9 @@ span.closeX {
   grid-column: max-content; }
 
 strong {
-  font-size: 46px; }
+  color: lightgrey;
+  font-size: 60px;
+  font-weight: 300; }
 
 img {
   display: block;
@@ -657,7 +654,6 @@ img {
   grid-auto-rows: 100px;
   grid-area: members;
   border: 1px grey solid;
-  padding-left: 25px;
   font-size: 20px;
   grid-gap: 10px;
   padding: 40px; }
@@ -686,34 +682,35 @@ span.gt {
   display: grid;
   grid-area: mess; }
 
-.mess-title h4 {
-  text-align: center;
+.mess h4 {
   font-size: 18px;
-  grid-column: 2 / 3;
+  grid-column: 1/2;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #878787;
-  margin: 0; }
+  margin: 0;
+  padding-top: 40px; }
 
 .info {
   display: grid;
   grid-area: info;
   justify-content: left; }
 
-#searchMess input {
-  height: 50px;
-  width: 400px;
+#searchMess {
+  height: 100px;
+  width: 100%;
   border: 1px solid lightgrey;
   border-radius: 5px; }
 
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
 
-.use-info button {
+.submit-btn {
   height: 50px;
-  width: 400px;
+  width: 100%;
   background-color: #8685ad;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -721,11 +718,11 @@ span.gt {
   font-size: 20px;
   text-align: center; }
 
-textarea {
+#message {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 400px; }
+  width: 100%; }
 
 .set {
   display: grid;
@@ -745,9 +742,8 @@ textarea {
 .save-btn,
 .cancel-btn {
   height: 50px;
-  width: 350px;
+  width: 48%;
   border-radius: 5px;
-  margin-left: 30px;
   font-size: 24px;
   color: white; }
 
@@ -758,8 +754,9 @@ textarea {
   background-color: darkgrey; }
 
 #timeZone {
+  border: 1px solid grey;
   height: 60px;
-  width: 550px; }
+  width: 100%; }
 
 .switch-container span {
   font-size: 26px;
@@ -767,7 +764,17 @@ textarea {
 
 li.public,
 li.notify {
-  width: 40px;
-  height: 40px; }
+  display: inline-flex;
+  width: 100%;
+  height: 80px; }
+
+.public p,
+.notify p {
+  font-size: 18px;
+  width: 200px; }
+
+.submits {
+  margin-top: 70px;
+  margin-left: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
