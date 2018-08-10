@@ -6,64 +6,6 @@ const modalBtn = document.querySelector('.bell-icon');
 // Get close button
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-
-//close individual alerts from ul .alert-list//////
-// target ul and li items in modal/////
-
-// const alertList = document.querySelector('.alert-list ul');
-// const closeAlerts = myList.querySelectorAll( '.close-alert span' );
-//const modalBody = document.querySelector('.modal-body');
-
-
-
-                          ///dashboard search bar//
-//form=.search-bar //
-//const userSearch = document.querySelector('.search-bar form');
-
-//input=.search //
-//const dashSearch = document.querySelector('.search input');
-
-
-
-                      //settings section///
-//send email notification/// 
-//div=.switch-container//
-//const switchContainer = document.querySelector(".switch-container");
-
-//input= #emailNotifications//
-//const emailNotification = document.getElementById("emailNotifications");
-
-//set profile to public////
-//div= .switch-container//
-
-//input = #profileTopublic//
-//const profileTpPublic = document.getElementById("profileToPublic");
-
-
-
-
-
-//// message user form//////
-//Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.//
-
-//button=.submit-btn//
-//const messageButton = document.querySelector('.submit-btn button');
-
-//textarea = #message  //
-//const textArea = document.getElementById('#message');
-// const textAreaInput = form.querySelector('textarea');
-//const  messInput = form.querySelector('input'); 
-
-
-///section form is in = .mess////
-//const formSection = document.querySelector('.mess');
-
-//div for form = .search-b includes input for search bar and textarea/////
-// const formInput = document.querySelector('.search-b");
-
-
-
-
 // Listen for open click in modal
 modalBtn.addEventListener('click', openModal);
 
@@ -87,31 +29,119 @@ function outsideClick(e){
     modal.style.display = 'none';
   }
 }
+ 
+
+
+//// message user form//////
+//Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.//
+
+
+// // //grab form id=form
+// const form = document.getElementById("form");
+// // //textarea id=message  //
+// const textArea = document.getElementById('message').value;
+// // //input id=seachMess
+// const inputMessage =document.getElementById('searchMess').value;
+
+// // // //add event listener to form
+// form.addEventListener("submit",(e) => {
+//   e.preventDefault();
+//   // let clicked = e.target.id;
+
+// if (inputMessage ==="" && textArea===""){
+//   input.classList.add("invalid");
+//   input.placeholder.add("Enter a valid user name");
+//   textarea.classList.add("Enter a valid user name");
+//   textarea.placeholder.add("Enter a user message");
+//  } else if (inputMessage === ""){
+//     input.classList.add("invalid");
+//     input.placeholder.add("Enter a valid user name");
+
+//   } else if (textArea === ""){
+//       textarea.classList.add("invalid");
+//       textarea.placeholder.add("Enter a user message");
+// } else {
+//   return confirm("Thank you! Your message has been sent!");
+//   form.reset();
+//   setTimeout(function () => inputMessage.textContent = ""; 3000);
+// }
+// });
+
+
+// //clear out the input element after submitting//
+// input.value = "";
+
+
+
 
               //section =.traffic-nav // hourly-monthly charts//
-///////use let for variabes that will have new data and info////
 
-// let dailyChart = document.querySelector('.day').getContext('2d');
-// let hourlyChart = document.querySelector('.hour').getContext('2d');
-// let weeklyChart = document.querySelector('.week').getContext('2d');
-// let monthlyChart = document.querySelector('.month).getContext('2d');
+
+// const hourlyLables= ['0-50', '55-100', '150-300', '16-120','44-55','20-26','80-99','11-33','23-39','18-24','130-165'];
+// const hourlyData= [475,840,1165,2010,1980,642,988];
+// const dailyLabels= ['1952', '1962', '1972', '1982','1992','2002','2012','2022','2032','2042','2052'];
+// const dailyData= [11892,15698,9032,16899,21572,17354,28732,29135,31,698,43741];
+// const weeklyLabels= ['Sun', 'Mon', 'Tues', 'Wed','Thurs','Fri','Sat'];
+// const weeklyData= [1475,1840,2165,3010,1980];
+// const monthlyLabels=['Jan', 'Feb', 'Mar', 'Apr','May','June','July','Aug','Sept','Oct','Nov', 'Dec'];
+// const monthlyData= [4750,8400,11605,2018,19360,6521,3456,8796];
+
+
+// const dailyChart = document.querySelector('.day').getContext('2d');
+// const hourlyChart = document.querySelector('.hour').getContext('2d');
+// const weeklyChart = document.querySelector('.week').getContext('2d');
+// const monthlyChart = document.querySelector('.month').getContext('2d');
 
 // const trafficList = document.querySelector('.traffic ul');
 // const trafficItems = document.querySelectorAll('li');
 
 
-//create new charts, lables and data for daily, hourly, weekly,monthy in new arrays
+// //create newLineCart function///
 
-///create if statements for:
-//if user clicks '.daily' (dailyChart)- update data to dailyData, dailyLabel
+// newLineChart(hourlyLabels, hourlyData);
+
+// // Display selected line chart in Traffic section
+// trafficList.addEventListener('click', function (e) {
+//   let clicked = e.target.id;
+
+//   if (e.target && e.target.nodeName === "LI") {
+//     li.forEach((li) => {
+//       li.classList.remove('active');
+//     });
+//   } else {
+//     return;
+//   }
+
+//   e.target.classList.add('active');
+//   newLineChart.pop();
+
+//   if (clicked === 'hour') {
+//     newLineChart(hourlyLabels, hourlyData);
+//   } else if (clicked === 'day') {
+//     newLineChart(dailyLabels, dailyData);
+//   } else if (clicked === 'week') {
+//     newLineChart(weeklyLabels, weeklyData);
+//   } else if (clicked === 'month') {
+//     newLineChart(monthlyLabels, monthlyData);
+//   }
+// });
 
 
+// function addData(chart, label, data) {
+//   chart.data.labels.push(label);
+//   chart.data.datasets.forEach((dataset) => {
+//       dataset.data.push(data);
+//   });
+//   chart.update();
+// }
 
-//if user clicks '.hourly' (hourlyChart)-update data to hourlyData, hourlyLabel
-//if user clicks '.weekly' (weeklyChart)-update data to weeklyData, weeklyLabel
-// if user clicks '.monthly' (monthlyCahrt) -update data to monthlyData, monthlyLabel
-
-
+// function removeData(chart) {
+//   chart.data.labels.pop();
+//   chart.data.datasets.forEach((dataset) => {
+//       dataset.data.pop();
+//   });
+//   chart.update();
+// }
 let myChart1 = document.getElementById('myChart1').getContext('2d');
 
 // Global Options
@@ -280,58 +310,9 @@ let traffic = new Chart(myChart3, {
   }
 });
 
-////////// chart info //////////
-
-
-
-////////// update chart info //////////
-
-// setTimeout(function() {
-//   addData(hourlyChart, [435, 150, 1570, 2334, 817, 293, 782], 0);
-// }, 2000);
-
-// function addData(chart, data, datasetIndex) {
-//   chart.data.datasets[datasetIndex].data = data;
-//   chart.update();
-// }
-
-// setTimeout(function() {
-//   addData(dailyChart, [45, 50, 30, 34, 61, 53, 42], 0);
-// }, 2000);
-
-// function addData(chart, data, datasetIndex) {
-//   chart.data.datasets[datasetIndex].data = data;
-//   chart.update();
-// }
-// setTimeout(function() {
-//   addData(chart, [45, 50, 30, 34, 61, 53, 42], 0);
-// }, 2000);
-
-// function addData(chart, data, datasetIndex) {
-//   chart.data.datasets[datasetIndex].data = data;
-//   chart.update();
-// }
-
-// setTimeout(function() {
-//   addData(monthlyChart, [45, 50, 30, 34, 61, 53, 42], 0);
-// }, 2000);
-
-// function addData(chart, data, datasetIndex) {
-//   chart.data.datasets[datasetIndex].data = data;
-//   chart.update();
-// }
-// function addData(chart, label, data) {
-//     chart.data.labels.push(label);
-//     chart.data.datasets.forEach((dataset) => {
-//         dataset.data.push(data);
-//     });
-//     chart.update();
-// }
 
 
 //////main autocomplete for message-user input////////
-
-
 
 //   function autocomplete(inp, arr) {  
 //      //the autocomplete function takes two arguments,   the text field element and an array of possible autocompleted values:*/
@@ -432,24 +413,145 @@ let traffic = new Chart(myChart3, {
 
 // //Array of members names///////
 
-// const memeberList = ["Victoria Chambers" ,"Dale Byrd", "Dawn Woods","Dan Oliver"];
+// const memebersList = ["Victoria Chambers", "Dale Byrd", "Dawn Woods","Dan Oliver"];
 
 //  function memberNames() {
 //   let listOfNames = [];
 
-//   for (let name = 0; name < memberList.length; name++) {
-//     let memberName = memberList[name].textContent;
+//   for (let name = 0; name < membersList.length; name++) {
+//     let memberName = membersList[name].textContent;
 //     listOfNames.push(memberName);
-//     if (listOfNames.length === memberList.length) {
+//     if (listOfNames.length === membersList.length) {
 //       return listOfNames;
 //     }
 //   }
 // }
 
 
-//re-write as forEach function //
-//memberNames.forEach(memberName => )
-
-// // Call autocomplete function
+// // // Call autocomplete function
 // let membersListArray = memberNames();
 // autocomplete(document.getElementById("searchMess"), membersListArray);
+
+
+
+////////local storage example/////
+                     //settings section///
+//send email notification/// 
+//div=.switch-container//
+//const switchContainer = document.querySelector(".switch-container");
+
+//input= #emailNotifications//
+//const emailNotification = document.getElementById("emailNotifications");
+
+//set profile to public////
+//div= .switch-container//
+
+//input = #profileTopublic//
+// const profileToPublic = document.getElementById("profileToPublic");
+//time Zone= #timeZone
+//const timeZone = document.getElementById("timeZone");
+
+
+// Save settings local storage
+// saveSettings.addEventListener('click', function (e) {
+
+// // Prevent form from submitting
+//   e.preventDefault();
+
+//   localStorage.setItem('emailNotifications', emailNotifications.checked);
+//   localStorage.setItem('profileToPublic', profileToPublic.checked);
+//   localStorage.setItem('timeZone', timeZone.selectedIndex);
+
+
+// // Listen for form submit///adding event listener to the form
+// document.getElementById('').addEventListener('submit', saveSetting);
+
+// // Save Setting
+
+// function saveSetting(e){
+//   // Get form values
+//   var siteName =document.getElementById('siteName').value;
+//  
+//   if(!validateForm(siteName)){
+//     return false;
+//   }
+
+//   var bookmark = {
+//     name: siteName,
+//     url: siteUrl
+//   }
+// Test if bookmarks is null
+
+// if(localStorage.getItem('bookmarks') === null){
+//   // Init array
+//   var bookmarks = [];
+//   // Add to array
+//   bookmarks.push(bookmark);
+//   // Set to localStorage
+//   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+// } else {
+//   // Get bookmarks from localStorage
+//   var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+//   // Add bookmark to array
+//   bookmarks.push(bookmark);
+//   // Re-set back to localStorage
+//   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+// }
+
+// // Clear form
+// document.getElementById('myForm').reset();
+
+// // Re-fetch bookmarks
+// fetchBookmarks();
+
+// e.preventDefault();
+// }
+
+// // Delete bookmark
+// function deleteBookmark(url){
+// // Get bookmarks from localStorage
+// var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+// // Loop through the bookmarks
+// for(var i =0;i < bookmarks.length;i++){
+//   if(bookmarks[i].url == url){
+//     // Remove from array
+//     bookmarks.splice(i, 1);
+//   }
+// }
+// // Re-set back to localStorage
+// localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+// // Re-fetch bookmarks
+// fetchBookmarks();
+// }
+
+// // Fetch bookmarks
+// function fetchBookmarks(){
+// // Get bookmarks from localStorage
+// var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+// // Get output id
+// var bookmarksResults = document.getElementById('bookmarksResults');
+// Validate Form
+// function validateForm(siteName, siteUrl){
+//   if(!siteName || !siteUrl){
+//     alert('Please fill in the form');
+//     return false;
+//   }
+
+//   var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+//   var regex = new RegExp(expression);
+
+//   if(!siteUrl.match(regex)){
+//     alert('Please use a valid URL');
+//     return false;
+//   }
+
+//   return true;
+// }
+
+// function addhttp(url) {
+//   if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+//       url = "http://" + url;
+//   }
+//   return url;
+// }

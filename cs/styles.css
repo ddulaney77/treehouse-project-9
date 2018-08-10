@@ -332,13 +332,13 @@ h4 {
 
 .main sub {
   color: lightgrey;
-  font-size: 35px;
+  font-size: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-right: 10px 30px; }
 
 .main p {
   padding: 10px 30px;
-  font-size: 35px;
+  font-size: 40px;
   color: white;
   font-family: 'Times New Roman', Times, serif; }
 
@@ -505,9 +505,7 @@ form.search-bar {
   height: 70px;
   margin: 10px;
   text-align: end;
-  border: 1px solid lightgrey;
-  background-color: #f4f1f8;
-  border-radius: 2px; }
+  border: 1px solid grey; }
 
 .alert {
   display: grid;
@@ -742,9 +740,6 @@ span.gt {
 
 #message:hover {
   cursor: pointer; }
-
-#form {
-  padding-right: 20px; }
 
 .set {
   display: grid;
