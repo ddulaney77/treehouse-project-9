@@ -25,7 +25,7 @@
   color: rgb(87, 85, 85);
 }
 
-.traffic li:hover {
+.traffic li:hover, .traffic li.active  {
   background-color: $lightgreen;
   color: white;
   border-radius: 30px;

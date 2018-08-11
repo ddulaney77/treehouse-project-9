@@ -559,7 +559,7 @@ span.closeX {
   padding-top: 10px;
   color: #575555; }
 
-.traffic li:hover {
+.traffic li:hover, .traffic li.active {
   background-color: #22af41;
   color: white;
   border-radius: 30px;
