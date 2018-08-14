@@ -14,10 +14,10 @@ $font-family--secondary: "Helvetica", Helvetica, Arial, sans-serif;
 // $font-size--large: 20px;
 // $font-size--xlrg: 24px;
 
-// //media query breakpoint
-// $brkpoint-s : 320px;
-// $brkpoint-m : 768px;
-// $brkpoint-l:  1024px;
+//media query breakpoint
+$brkpoint-s : 320px;
+$brkpoint-m : 768px;
+$brkpoint-l:  1024px;
 
 
 // //descriptive color-secondary
@@ -38,11 +38,15 @@ $lightgreen:  #22af41;
 // //functional color variables for main style
   $color-primary: #8685ad;
   $color-secondary: #a09ed1;
+  $color-accent: limegreen;
+  $color-error: red;
 
 // //button border radius
 // $br-default: 5px;
 $br-round: 50%;
 
+//borers//
+$border: 1px solid grey;
 
 //shades of purple and color matches for 9 /////
 //  $slighly-saturated-blue= #6f6fb6;

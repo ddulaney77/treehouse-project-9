@@ -311,6 +311,10 @@ h4 {
   font-size: 12px;
   text-transform: uppercase; }
 
+.bell-icon:hover, .avatar p:hover, .closeBtn:hover,
+.closeBtn:focus, .close-alert:hover, .dash-bar input:hover, span.closeX:hover, span.closeX, .traffic li:hover, .traffic li.active, #searchMess:hover, .autocomplete-items div, .submit-btn:hover, #message:hover, #timeZone:hover, .switch-light.switch-material a:hover, .switch-material.switch-light > span:hover, .switch-material.switch-light input:checked ~ span a:hover {
+  cursor: pointer; }
+
 .main {
   display: grid;
   grid-template-columns: 1fr 80px 150px;
@@ -327,9 +331,6 @@ h4 {
   justify-self: flex-end;
   margin: auto; }
 
-.bell-icon:hover {
-  cursor: pointer; }
-
 .main sub {
   color: lightgrey;
   font-size: 35px;
@@ -339,7 +340,7 @@ h4 {
 .main p {
   padding: 10px 30px;
   font-size: 35px;
-  color: white;
+  color: #fff;
   font-family: 'Times New Roman', Times, serif; }
 
 .avatar {
@@ -354,8 +355,7 @@ h4 {
   padding: 0; }
 
 .avatar p:hover {
-  color: white;
-  cursor: pointer; }
+  color: #fff; }
 
 @keyframes modalopen {
   from {
@@ -372,7 +372,7 @@ h4 {
   overflow: auto;
   margin-left: 65%; }
   .modal-content {
-    background-color: #514596;
+    background-color: #8685ad;
     width: 62%;
     animation-name: modalopen;
     animation-duration: 1s;
@@ -386,7 +386,7 @@ h4 {
     color: #fff;
     text-align: center; }
   .modal-body {
-    background-color: #514596;
+    background-color: #8685ad;
     padding: 10px; }
   .modal-footer {
     background: #a09ed1;
@@ -401,8 +401,7 @@ h4 {
 .closeBtn:hover,
 .closeBtn:focus {
   color: #000;
-  text-decoration: none;
-  cursor: pointer; }
+  text-decoration: none; }
 
 .modal li {
   color: #fff;
@@ -424,9 +423,6 @@ h4 {
 .close-alert span {
   font-size: 22px; }
 
-.close-alert:hover {
-  cursor: pointer; }
-
 .badge1 {
   grid-column: 2;
   position: relative; }
@@ -438,7 +434,7 @@ h4 {
   right: 15px;
   font-size: 1em;
   background: limegreen;
-  color: white;
+  color: #fff;
   width: 20px;
   height: 20px;
   text-align: center;
@@ -492,9 +488,6 @@ p {
   width: 60%;
   border: 1px solid grey; }
 
-.dash-bar input:hover {
-  cursor: pointer; }
-
 img #mag-glass {
   margin: auto;
   height: 35px;
@@ -528,14 +521,12 @@ form.search-bar {
   font-size: 22px; }
 
 span.closeX:hover {
-  cursor: pointer;
   color: #494747; }
 
 span.closeX {
-  color: white;
+  color: #fff;
   justify-self: right;
   font-size: 40px;
-  cursor: pointer;
   transition: 0.3s; }
 
 .traffic-nav {
@@ -562,8 +553,7 @@ span.closeX {
 .traffic li:hover, .traffic li.active {
   background-color: #22af41;
   color: white;
-  border-radius: 30px;
-  cursor: pointer; }
+  border-radius: 30px; }
 
 .line {
   grid-area: line;
@@ -600,7 +590,7 @@ span.closeX {
   height: 90px;
   width: 90px;
   background-color: #8685ad;
-  fill: white;
+  fill: #fff;
   border-radius: 50%;
   margin: auto; }
 
@@ -640,12 +630,12 @@ span.closeX {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: grey;
+  color: #878787;
   padding-bottom: 25px;
   grid-column: max-content; }
 
 strong {
-  color: grey;
+  color: #878787;
   font-size: 60px;
   font-weight: 100; }
 
@@ -663,7 +653,7 @@ img {
   grid-template-columns: 100px 1fr 1fr;
   grid-auto-rows: 100px;
   grid-area: members;
-  border: 1px grey solid;
+  border: 1px solid grey;
   font-size: 20px;
   grid-gap: 10px;
   padding: 40px; }
@@ -701,19 +691,23 @@ span.gt {
   margin: 0;
   padding-top: 40px; }
 
+.mess span {
+  font-size: 20px;
+  color: white;
+  background-color: limegreen;
+  text-align: center; }
+
 .info {
   display: grid;
   grid-area: info;
   justify-content: left; }
 
 #searchMess {
-  height: 100px;
-  width: 100%;
+  margin-bottom: 20px;
+  height: 75px;
+  width: 98%;
   border: 1px solid lightgrey;
   border-radius: 5px; }
-
-#searchMess:hover {
-  cursor: pointer; }
 
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -721,30 +715,56 @@ span.gt {
   display: inline-block;
   width: 100%; }
 
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0; }
+
+.autocomplete-items div {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4; }
+
+.autocomplete-items div strong {
+  font-size: 24px; }
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #a09ed1; }
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff; }
+
 .submit-btn {
   height: 50px;
-  width: 100%;
+  width: 98%;
   background-color: #8685ad;
   border: 1px solid lightgrey;
   border-radius: 5px;
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center; }
-
-.submit-btn:hover {
-  cursor: pointer; }
 
 #message {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 100%; }
-
-#message:hover {
-  cursor: pointer; }
+  width: 98%; }
 
 #form {
   padding-right: 20px; }
+
+.invalid::placeholder {
+  color: red; }
 
 .set {
   display: grid;
@@ -767,7 +787,7 @@ span.gt {
   width: 48%;
   border-radius: 5px;
   font-size: 24px;
-  color: white; }
+  color: #fff; }
 
 .save-btn {
   background-color: #8685ad; }
@@ -783,9 +803,6 @@ span.gt {
   border: 1px solid grey;
   height: 60px;
   width: 100%; }
-
-#timeZone:hover {
-  cursor: pointer; }
 
 .switch-container span {
   font-size: 26px;
@@ -809,19 +826,10 @@ li.notify {
 .switch-light.switch-material a {
   background-color: #ddc249; }
 
-.switch-light.switch-material a:hover {
-  cursor: pointer; }
-
 .switch-material.switch-light > span {
   background: #a2a2d0; }
 
-.switch-material.switch-light > span:hover {
-  cursor: pointer; }
-
 .switch-material.switch-light input:checked ~ span a {
   background: #86d886; }
-
-.switch-material.switch-light input:checked ~ span a:hover {
-  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

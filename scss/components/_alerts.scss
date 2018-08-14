@@ -6,17 +6,17 @@
 .alert {
   display: grid;
   grid-area: alert;
- grid-template-columns: 100px max-content 1fr;
+  grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color: $color-primary;
   color: $white;
-
 }
 .alert span{
   color: $white;
   font-size: 36px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .alert p {
   padding-top: 15px;
   color: $white;
@@ -24,15 +24,15 @@
 }
 
 span.closeX:hover {
-  cursor: pointer;
+  @extend %pointer;
   color: rgb(73, 71, 71);
 }
 
 span.closeX {
-  color: white;
+  color: $white;
   justify-self: right;
   font-size: 40px;
-  cursor: pointer;
+  @extend %pointer;
   transition: 0.3s
 }
 

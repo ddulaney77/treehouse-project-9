@@ -257,7 +257,7 @@
         <img src="images/victoria.jpg" alt="image of Victoria">
         </div> 
         <div class="mem-content">
-          <p>Victoria Chambers</p>
+          <span>Victoria Chambers</span>
           <a href="mailto:victoria.chamber80@example.com"></a>
             <p>victoria.chamber80@example.com</p>
             </div>
@@ -269,7 +269,7 @@
               <img src="images/dale.jpg" alt="image of Dale">
            </div>
            <div class="mem-content">
-              <p>Dale Byrd</p>
+              <span>Dale Byrd</span>
              <a href="mailto:dale.byrd52@example.com"></a> 
               <p>dale.byrd52@example.com</p>
           </div>
@@ -281,7 +281,7 @@
           <img src="images/dawn.jpg" alt="image of Dawn">
           </div>
           <div class="mem-content">
-              <p>Dawn Wood</p>
+              <span>Dawn Wood</span>
                 <a href="mailto:dawn.wood16@example.com"></a>
                 <p>dawn.wood16@example.com</p>
           </div>
@@ -294,7 +294,7 @@
               <img src="images/dan.jpg" alt="image of Dan">
             </div>
             <div class="mem-content">
-                <p>Dan Oliver</p>
+                <span>Dan Oliver</span>
                   <a href="mailto:dan.oliver82@example.com"></a>
                   <p>dan.oliver82@example.com</p>
               </div>
@@ -354,13 +354,14 @@
 
 <section class="mess">
         <h4>Message User</h4>
-        <form id="form" class="search-b" autocomplete="off" action ="index.html" method="post">
+        <form id="userForm" class="search-b" autocomplete="off" action ="index.html" method="post">
             <div class="info autocomplete">
-              <input id="searchMess" type="text" placeholder="Search for User">
+              <input id="searchMess" name="nameInput" type="text" placeholder="Search for User">
               </div>
-  <textarea id="message" name="user_message" placeholder="Message for User"></textarea>
+  <textarea id="message" name="message" placeholder="Message for User"></textarea>
   <button class="submit-btn" type="submit">Send</button>
 </form>
+<span></span>
 </div>
 </div>
 </section>

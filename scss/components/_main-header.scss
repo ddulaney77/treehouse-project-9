@@ -20,7 +20,7 @@
 }
 
 .bell-icon:hover{
-  cursor: pointer;
+  @extend %pointer;
 }
 .main sub{
   color: lightgrey;
@@ -32,7 +32,7 @@
 .main p{
   padding: 10px 30px;
   font-size: 35px;
-  color: white;
+  color: $white;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -50,8 +50,8 @@
 }
 
 .avatar p:hover{
-  color:white;
-  cursor: pointer;
+  color: $white;
+  @extend %pointer;
 }
 
 @keyframes modalopen{
@@ -70,7 +70,7 @@
   margin-left: 65%;
    
   &-content{
-    background-color:#514596;
+    background-color:$color-primary;
     width:62%;
     animation-name:modalopen;
     animation-duration:1s;
@@ -87,7 +87,7 @@
     text-align: center;
   }
   &-body{
-    background-color: #514596;
+    background-color: $color-primary;
     padding:10px;
   }
   &-footer{
@@ -106,7 +106,7 @@
   .closeBtn:focus {
     color: $black;
     text-decoration: none;
-    cursor:pointer;
+    @extend %pointer;
   }
 
 .modal li {
@@ -116,7 +116,7 @@
   padding-left: 15px;
 }
 .modal li:hover {
-  background-color: limegreen;
+  background-color: $color-accent;
   border-radius: 10px;
 }
 .modal ul {
@@ -128,11 +128,10 @@
   float: right;
 }
 .close-alert span{
-  
   font-size: 22px;
 }
 .close-alert:hover {
-  cursor: pointer;
+  @extend %pointer;
 }
 
 .badge1 {
@@ -145,12 +144,12 @@
   top:-60px;
   right: 15px;
   font-size:1em;
-  background:limegreen;
-  color:white;
+  background:$color-accent;
+  color: $white;
   width:20px;
   height:20px;
   text-align:center;
   line-height:18px;
-  border-radius:50%;
+  border-radius: $br-round;
   box-shadow:0 0 1px #333;
 }

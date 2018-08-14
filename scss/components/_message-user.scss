@@ -1,3 +1,4 @@
+
 // Message User Widget
 // You don't have to add real search functionality, but if you attempt to get the exceeds grade, you'll need to make up some user data.
 // Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.
@@ -24,7 +25,13 @@
   padding-top: 40px;
 
 }
-// Create a field for searching for a user.
+
+.mess span {
+  font-size: 20px;
+  color: white;
+  background-color: $color-accent;
+  text-align: center;
+}
 
 .info {
   display: grid;
@@ -33,13 +40,14 @@
 }
 
 #searchMess {
-  height: 100px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
+    margin-bottom: 20px;
+    height: 75px;
+    width: 98%;
+    border: 1px solid lightgrey;;
+    border-radius: 5px;
 }
  #searchMess:hover {
-   cursor: pointer;
+ @extend %pointer;
  }
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -47,30 +55,68 @@
   display: inline-block;
   width: 100%;
 }
+
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+
+}
+.autocomplete-items div {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+  @extend %pointer;
+}
+
+.autocomplete-items div strong {
+  font-size: 24px;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: $color-secondary; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
 .submit-btn  {
   height: 50px;
-  width: 100%;
+  width: 98%;
   background-color: $color-primary;
   border: 1px solid lightgrey;
   border-radius: 5px;
   color: $white;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
+  &:hover {
+    @extend %pointer;
 }
-.submit-btn:hover {
-  cursor: pointer;
 }
-// Add a message textarea field that lets you add a message.
+
 #message {
   border: 1px solid lightgrey;
   border-radius: 5px;
   height: 200px;
-  width: 100%;
+  width: 98%;
+  &:hover {
+  @extend %pointer;
 }
-
-#message:hover {
-  cursor: pointer;
 }
 #form{
   padding-right: 20px;
+}
+
+.invalid::placeholder {
+  color: $color-error;
 }

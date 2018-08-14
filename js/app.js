@@ -33,35 +33,54 @@ function outsideClick(e){
 
 //// message user form//////
 //Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.//
-
-// // //grab form id=form
-const form = document.getElementById("form");
-// // //textarea id=message  //
-const textArea = document.getElementById('message');
-// // //input id=seachMess
-const inputMessage =document.getElementById('searchMess');
-
-// // // //add event listener to form
-form.addEventListener("submit",(e) => {
-  e.preventDefault();
- 
-// add array of valid names and if statements to match//
-
-if (inputMessage.value === ""){
-  alert("Please enter a valid user name");
+const userForm = document.getElementById("userForm");
+const submitButton = document.querySelector(".submit-btn");
+const searchMess = document.getElementById("searchMess");
+const message = document.getElementById('message');
   
- } else if (textArea.value === ""){
-    alert("Please enter your message here");
+	// Listen for button click
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
-  } else if( textArea !=""){
-  confirm("Thank you! Your message has been sent!");
-  form.reset();
-}
+const textArea = message.value;
+const inputName = searchMess.value;
+const validationText = document.querySelector('.mess span');
+
+if (inputName === "" && textArea === ""){
+    searchMess.classList.add('invalid');
+    searchMess.placeholder = "Please enter a username";
+    message.classList.add('invalid');
+    message.placeholder = "Please enter a user message";
+
+  }else if( inputName === ""){
+    searchMess.classList.add('invalid');
+    searchMess.placeholder = "Please enter a user name";
+  
+  }else if( textArea === ""){
+    message.classList.add('invalid');
+    message.placeholder = "Please enter a user message";
+    
+} else{
+  validationText.textContent = "Thank you! Your message has been sent!";
+    form.reset();
+    setTimeout(function () {
+      validationText.textContent = '';
+    }, 4000);
+  }
+
+// Reset form validation message on search input
+searchMess.onfocus = function () {
+  searchMess.classList.remove('invalid');
+  searchMess.placeholder = 'Search for User';
+};
+
+// Reset form validation message on message textarea
+  message.onfocus = function () {
+  message.classList.remove('invalid');
+  message.placeholder = 'Message for User';
+};
+
 });
-
-
-// //clear out the input element after submitting//
-// input.value = "";
 
 
               //section =.traffic-nav // hourly-monthly charts//
@@ -104,9 +123,6 @@ trafficList.addEventListener('click', function (e) {
     return;
   }
 
-  // e.target.classList.add('active');
-  // newLineChart.pop();
-// //create newLineCart function///
 e.target.classList.add('active');
     if (clicked === 'hour') {
     newLineChart(traffic, hourlyLabels, hourlyData);
@@ -384,12 +400,11 @@ let mobileUser = new Chart(myChart2, {
  }
 
 // //Array of members names///////
-
-const membersList = ["Victoria Chambers", "Dale Byrd", "Dawn Woods","Dan Oliver"];
+const membersList = document.querySelectorAll('.mem-content span');
 
  function memberNames() {
   let listOfNames = [];
-
+ 
   for (let name = 0; name < membersList.length; name++) {
     let memberName = membersList[name].textContent;
     listOfNames.push(memberName);
@@ -399,26 +414,21 @@ const membersList = ["Victoria Chambers", "Dale Byrd", "Dawn Woods","Dan Oliver"
   }
 }
 
-
 // // // Call autocomplete function
 let membersListArray = memberNames();
 autocomplete(document.getElementById("searchMess"), membersListArray);
-
 
 
 ////////local storage example/////
                      //settings section///
 
 const switchContainer = document.querySelector(".switch-container");
-//input= #emailNotifications//
 const emailNotification = document.getElementById("emailNotifications");
-//input = #profileTopublic//
 const profileToPublic = document.getElementById("profileToPublic");
-//time Zone= #timeZone
 const timeZone = document.getElementById("timeZone");
 
 
-// Save settings local storage
+// // Save settings local storage
 // saveSettings.addEventListener('click', function (e) {
 
 // // Prevent form from submitting
@@ -430,94 +440,72 @@ const timeZone = document.getElementById("timeZone");
 
 
 // // Listen for form submit///adding event listener to the form
-// document.getElementById('').addEventListener('submit', saveSetting);
+// document.getElementById('localSetting').addEventListener('submit', localSetting);
 
 // // Save Setting
 
-// function saveSetting(e){
+// function localSetting(e){
 //   // Get form values
-//   var siteName =document.getElementById('siteName').value;
-//  
-//   if(!validateForm(siteName)){
+//   var localSetting =document.getElementById('localSetting').value;
+// //  
+//   if(!validateForm(localSetting)){
 //     return false;
 //   }
 
-//   var bookmark = {
-//     name: siteName,
-//     url: siteUrl
-//   }
-// Test if bookmarks is null
+// //   var localSet = {
+// //     name: siteName,
+// //   
+// //   }
+// // Test if bookmarks is null
 
-// if(localStorage.getItem('bookmarks') === null){
+// if(localStorage.getItem('localSetting') === null){
 //   // Init array
-//   var bookmarks = [];
+//   var localSetting = [];
 //   // Add to array
-//   bookmarks.push(bookmark);
+//   localSetting.push(localSet);
 //   // Set to localStorage
-//   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+//   localStorage.setItem('localSetting', JSON.stringify(localSetting));
 // } else {
-//   // Get bookmarks from localStorage
-//   var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+//   // Get localSetting from localStorage
+//   var localSetting = JSON.parse(localStorage.getItem('localSetting'));
 //   // Add bookmark to array
-//   bookmarks.push(bookmark);
+//   localSetting.push(localSet);
 //   // Re-set back to localStorage
-//   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-// }
+//   localStorage.setItem('localSetting', JSON.stringify(localSetting));
+// // }
 
 // // Clear form
 // document.getElementById('myForm').reset();
 
 // // Re-fetch bookmarks
-// fetchBookmarks();
+// fetchLocalSetting();
 
 // e.preventDefault();
 // }
 
-// // Delete bookmark
-// function deleteBookmark(url){
-// // Get bookmarks from localStorage
-// var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
-// // Loop through the bookmarks
-// for(var i =0;i < bookmarks.length;i++){
-//   if(bookmarks[i].url == url){
+// // Delete localSetting
+// function deleteLocalSetting{
+// // Get localSetting from localStorage
+// var localSetting = JSON.parse(localStorage.getItem('localSetting'));
+// // Loop through localSetting
+// for(var i =0;i < localSetting.length;i++){
+//   if(localSetting[i].url == url){
 //     // Remove from array
-//     bookmarks.splice(i, 1);
+//     localSetting.splice(i, 1);
 //   }
 // }
 // // Re-set back to localStorage
-// localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+// localStorage.setItem('localSetting', JSON.stringify(localSetting));
 
 // // Re-fetch bookmarks
-// fetchBookmarks();
+// fetchLocalSetting();
 // }
 
 // // Fetch bookmarks
-// function fetchBookmarks(){
-// // Get bookmarks from localStorage
-// var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+// function fetchLocalSetting(){
+// // Get localSetting from localStorage
+// var localSetting = JSON.parse(localStorage.getItem('localSetting'));
 // // Get output id
-// var bookmarksResults = document.getElementById('bookmarksResults');
-// Validate Form
-// function validateForm(siteName, siteUrl){
-//   if(!siteName || !siteUrl){
-//     alert('Please fill in the form');
-//     return false;
-//   }
+// var localSettingResults = document.getElementById('localSettingResults');
 
-//   var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-//   var regex = new RegExp(expression);
 
-//   if(!siteUrl.match(regex)){
-//     alert('Please use a valid URL');
-//     return false;
-//   }
-
-//   return true;
-// }
-
-// function addhttp(url) {
-//   if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-//       url = "http://" + url;
-//   }
-//   return url;
-// }

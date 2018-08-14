@@ -3,7 +3,7 @@
 .traffic-nav {
   display: grid;
   grid-area: traffic-nav;
-  border: 1px solid grey;
+  border:$border;
 }
 
 
@@ -29,5 +29,5 @@
   background-color: $lightgreen;
   color: white;
   border-radius: 30px;
-  cursor: pointer;
+  @extend %pointer;
 }

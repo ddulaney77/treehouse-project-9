@@ -14,7 +14,7 @@ Local storage is used to save the settings. When page is reloaded the settings a
  display: grid;
  grid-template-columns: 100px 1fr 1fr;
  grid-area: activity;
- border: 1px solid grey;
+ border: $border;
  padding-left: 25px;
  font-size: 20px;
  justify-self: center;

@@ -8,5 +8,5 @@
 .bar{
   grid-area: bar;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid grey;
+  border: $border;
 }
