@@ -7,7 +7,7 @@
 .set {
   display: grid;
   grid-area: set;
-  border: 2px solid darkgray;
+  border: $border;
 }
 
 .set-title h4{
@@ -39,7 +39,7 @@ margin: 0;
 
 .save-btn:hover,
 .cancel-btn:hover{
-  cursor: pointer;
+ @extend %pointer;
 }
 // Create a dropdown to select timezone.
 #timeZone {

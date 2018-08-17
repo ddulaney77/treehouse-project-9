@@ -312,7 +312,8 @@ h4 {
   text-transform: uppercase; }
 
 .bell-icon:hover, .avatar p:hover, .closeBtn:hover,
-.closeBtn:focus, .close-alert:hover, .dash-bar input:hover, span.closeX:hover, span.closeX, .traffic li:hover, .traffic li.active, #searchMess:hover, .autocomplete-items div, .submit-btn:hover, #message:hover, #timeZone:hover, .switch-light.switch-material a:hover, .switch-material.switch-light > span:hover, .switch-material.switch-light input:checked ~ span a:hover {
+.closeBtn:focus, .close-alert:hover, .dash-bar input:hover, span.closeX:hover, span.closeX, .traffic li:hover, .traffic li.active, #searchMess:hover, .autocomplete-items div, .submit-btn:hover, #message:hover, .save-btn:hover,
+.cancel-btn:hover, #timeZone:hover, .switch-light.switch-material a:hover, .switch-material.switch-light > span:hover, .switch-material.switch-light input:checked ~ span a:hover {
   cursor: pointer; }
 
 .main {
@@ -444,8 +445,7 @@ h4 {
 
 .container {
   display: grid;
-  grid-template-columns: 120px repeat(4, 1fr);
-  grid-template-areas: "main main main main main" "main-nav dash dash dash dash" "main-nav alert alert alert alert" "main-nav traffic-nav traffic-nav traffic-nav traffic-nav"  "main-nav bar bar donut donut"  "main-nav bar bar donut donut"  "main-nav line line line line" "main-nav stats stats stats ." "main-nav members members activity activity"  "main-nav mess mess set set"; }
+  grid-template-areas: "main" "main-nav" "dash" "alert" "traffic-nav"  "bar"  "donut"  "line" "stats" "members" "activity"  "mess" "set"; }
 
 .main-nav {
   display: grid;
@@ -453,21 +453,33 @@ h4 {
   grid-template-columns: 1fr;
   grid-auto-rows: 100px;
   background-color: #a09ed1;
-  border: 1px solid darkgray; }
+  border: 1px solid grey; }
 
 .dashboard, .set-icon, .visit-icon, .member-icon {
   max-width: 100%;
   height: 50px;
-  width: 50px;
-  margin: auto; }
+  width: 50px; }
+
+.dashboard {
+  border-left: 2px solid limegreen; }
 
 p {
   padding: 0;
   margin: 0; }
 
+@media (min-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 120px repeat(2, 1fr);
+    grid-template-areas: "main-nav main main" "main-nav dash dash" "main-nav alert alert" "main-nav traffic-nav traffic-nav"  "main-nav bar bar"  "main-nav donut donut"  "main-nav line line" "main-nav stats stats" "main-nav members members" "main-nav activity activity"  "main-nav mess mess" "main-nav set set"; } }
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 120px repeat(4, 1fr);
+    grid-template-areas: "main main main main main" "main-nav dash dash dash dash" "main-nav alert alert alert alert" "main-nav traffic-nav traffic-nav traffic-nav traffic-nav"  "main-nav bar bar donut donut"  "main-nav line line line line" "main-nav stats stats stats stats" "main-nav members members activity activity"  "main-nav mess mess set set"; } }
 .dash {
   grid-area: dash;
-  border: 2px solid grey; }
+  border: 1px solid grey; }
 
 .dash-bar h4 {
   display: grid;
@@ -505,11 +517,17 @@ form.search-bar {
 .alert {
   display: grid;
   grid-area: alert;
-  grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color: #8685ad;
   color: #fff; }
 
+@media (min-width: 768px) {
+  .alert {
+    display: grid;
+    grid-area: alert;
+    padding: 20px;
+    background-color: #8685ad;
+    color: #fff; } }
 .alert span {
   color: #fff;
   font-size: 36px;
@@ -544,7 +562,7 @@ span.closeX {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-auto-rows: 30px;
-  font-size: 22px;
+  font-size: 16px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   padding-top: 10px;
@@ -555,35 +573,40 @@ span.closeX {
   color: white;
   border-radius: 30px; }
 
+.traffic-chart {
+  max-width: 100%; }
+
 .line {
   grid-area: line;
   border: 1px solid grey; }
 
 .bar {
   grid-area: bar;
-  grid-template-columns: 1fr 1fr;
   border: 1px solid grey; }
+
+.bar-chart {
+  max-width: 100%; }
 
 .donut {
   grid-area: donut;
   border: 1px solid grey; }
 
-#stat-wrapper {
-  display: grid;
-  grid-column: 2/6;
-  grid-row: 8;
-  margin: 3em; }
+.donut-chart {
+  max-width: 100%; }
 
 .stats {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-row: span 3;
   grid-area: stats;
   grid-gap: 25px; }
 
+@media (min-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr); } }
 .twit, .face, .goog {
   display: grid;
-  border: 2px darkgrey solid;
+  border: 1px solid grey;
   padding: 40px; }
 
 .social-icon {
@@ -626,14 +649,6 @@ span.closeX {
   padding-top: 20px;
   padding-left: 15px; }
 
-#stat-wrapper h4 {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: #878787;
-  padding-bottom: 25px;
-  grid-column: max-content; }
-
 strong {
   color: #878787;
   font-size: 60px;
@@ -647,15 +662,12 @@ img {
   border-radius: 50%; }
 
 .members {
-  justify-items: center;
-  justify-self: center;
   display: grid;
-  grid-template-columns: 100px 1fr 1fr;
-  grid-auto-rows: 100px;
   grid-area: members;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
   border: 1px solid grey;
   font-size: 20px;
-  grid-gap: 10px;
   padding: 40px; }
 
 /*An on/off widget for whether to send email notifications.
@@ -663,19 +675,18 @@ An on/off widget for whether to set profile to public or private.
 A dropdown to select timezone options.
 Save and Cancel buttons (these do not have to do anything functional).
 Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
-.activity {
-  display: grid;
-  grid-template-columns: 100px 1fr 1fr;
-  grid-area: activity;
-  border: 1px solid grey;
-  padding-left: 25px;
-  font-size: 20px;
-  justify-self: center;
-  justify-items: center;
-  padding: 40px; }
-
 span.gt {
   font-size: 30px; }
+
+.activity {
+  display: grid;
+  grid-area: activity;
+  grid-template-columns: 100px 6fr  1fr;
+  grid-auto-rows: 100px;
+  border: 1px solid grey;
+  font-size: 20px;
+  grid-gap: 10px;
+  padding: 40px; }
 
 .mess {
   margin-left: 30px;
@@ -690,12 +701,6 @@ span.gt {
   color: #878787;
   margin: 0;
   padding-top: 40px; }
-
-.mess span {
-  font-size: 20px;
-  color: white;
-  background-color: limegreen;
-  text-align: center; }
 
 .info {
   display: grid;
@@ -745,6 +750,7 @@ span.gt {
   color: #ffffff; }
 
 .submit-btn {
+  margin-top: 6px;
   height: 50px;
   width: 98%;
   background-color: #8685ad;
@@ -769,7 +775,7 @@ span.gt {
 .set {
   display: grid;
   grid-area: set;
-  border: 2px solid darkgray; }
+  border: 1px solid grey; }
 
 .set-title h4 {
   display: grid;
@@ -794,10 +800,6 @@ span.gt {
 
 .cancel-btn {
   background-color: darkgrey; }
-
-.save-btn:hover,
-.cancel-btn:hover {
-  cursor: pointer; }
 
 #timeZone {
   border: 1px solid grey;

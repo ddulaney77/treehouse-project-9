@@ -10,17 +10,37 @@ A dropdown to select timezone options.
 Save and Cancel buttons (these do not have to do anything functional).
 Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
 
-.activity {
- display: grid;
- grid-template-columns: 100px 1fr 1fr;
- grid-area: activity;
- border: $border;
- padding-left: 25px;
- font-size: 20px;
- justify-self: center;
- justify-items: center;
- padding: 40px;
-}
 span.gt {
   font-size: 30px;
  }
+
+
+//mobile first//
+ .activity {
+  display: grid;
+  grid-area: activity;
+  // width: 100%;
+  // justify-items: left;
+  // justify-self: left;
+  grid-template-columns: 100px 6fr  1fr;
+  grid-auto-rows: 100px; 
+  border: $border;
+  font-size: 20px;
+  grid-gap: 10px;
+  padding: 40px;
+}
+ 
+
+//  @media(min-width:768px){
+//   .activity {
+//    display: grid;
+//    grid-template-columns: 100px 1fr 1fr;
+//    grid-area: activity;
+//    border: $border;
+//    padding-left: 25px;
+//    font-size: 20px;
+//    justify-self: center;
+//    justify-items: center;
+//    padding: 40px;
+//   }
+//   }

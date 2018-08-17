@@ -9,16 +9,30 @@ img {
   border-radius: $br-round;
 }
 
-.members {
-justify-items: center;
-justify-self: center;
-display: grid;
-grid-template-columns: 100px 1fr 1fr;
-grid-auto-rows: 100px;
-grid-area: members;
-border: $border;
-font-size: 20px;
-grid-gap: 10px;
-padding: 40px;// 
 
+//mobile first//
+.members{
+  display: grid;
+  grid-area: members;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+  border: 1px solid grey;
+  font-size: 20px;
+  padding: 40px;
 }
+
+// //desktop//
+// @media(min-width: 768px){
+//   .members {
+//   justify-items: center;
+//   justify-self: center;
+//   display: grid;
+//   grid-template-columns: 100px 1fr 1fr;
+//   grid-auto-rows: 100px;
+//   grid-area: members;
+//   border: $border;
+//   font-size: 20px;
+//   grid-gap: 10px;
+//   padding-top: 40px;
+//   }
+//   }

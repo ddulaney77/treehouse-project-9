@@ -16,9 +16,10 @@
   
 .traffic li {
   display: grid;
+  // justify-self: center;
   grid-template-columns: repeat(4, 100px);
   grid-auto-rows: 30px;
-  font-size: 22px;
+  font-size: 16px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   padding-top: 10px;
@@ -31,3 +32,22 @@
   border-radius: 30px;
   @extend %pointer;
 }
+
+.traffic-chart {
+ 
+  max-width: 100%;
+}
+
+// @media(min-width:768px){
+// .traffic li {
+//   display: grid;
+//   grid-template-columns: repeat(4, 100px);
+//   grid-auto-rows: 30px;
+//   font-size: 22px;
+//   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//   text-align: center;
+//   padding-top: 10px;
+//   color: rgb(87, 85, 85);
+// }
+
+// }

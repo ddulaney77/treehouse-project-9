@@ -3,13 +3,25 @@
 // Include a notification icon in the navigation header. Use the icon-bell.svg file. In the mockup this is the bell in the top right corner of the page.
 // Display at least two notifications when the user clicks the alerts icon
 // This could be a pop-up window or dropdown menu.
+
+//mobile first//
 .alert {
   display: grid;
   grid-area: alert;
-  grid-template-columns: 100px max-content 1fr;
+  // grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color: $color-primary;
   color: $white;
+}
+@media(min-width:768px){
+  .alert {
+  display: grid;
+  grid-area: alert;
+  // grid-template-columns: 100px max-content 1fr;
+  padding: 20px;
+  background-color: $color-primary;
+  color: $white;
+}
 }
 .alert span{
   color: $white;

@@ -29,8 +29,33 @@ function outsideClick(e){
   }
 }
  
+window.onload = function(){
+  if(supportsLocalStorage) {
+    const emailSettings = JSON.parse(localStorage.getItem('emailNotifications'));
+    const profileSettings = JSON.parse(localStorage.getItem('profileToPublic'));
+    if (emailSettings) {
+      emailNotifications.checked = true;
+    } else {
+      emailNotifications.checked = false;
+    }
+    if (profileSettings) {
+      profileToPublic.checked = true;
+    } else {
+      profileToPublic.checked = false;
+    }
+    timeZone.selectedIndex = localStorage.getItem('timeZone');
+  }
+}
 
 
+
+function supportsLocalStorage(){
+  try{
+return "localStorage" in window && window["localStorage"] !=null;
+} catch(e){
+return false;
+}
+}
 //// message user form//////
 //Create a “Send” button and use JS to allow you to submit the form and display a confirmation the message was sent. You won't actually submit the form, just simulate the action using JavaScript.//
 const userForm = document.getElementById("userForm");
@@ -61,10 +86,14 @@ if (inputName === "" && textArea === ""){
     message.placeholder = "Please enter a user message";
     
 } else{
-  validationText.textContent = "Thank you! Your message has been sent!";
-    form.reset();
+    submitButton.setAttribute('disabled', true);
+    userForm.reset();
+    submitButton.textContent = "Thank you! Your message has been sent!";
+    submitButton.style.backgroundColor='limegreen';
     setTimeout(function () {
-      validationText.textContent = '';
+      submitButton.textContent = "Send";
+      submitButton.style.backgroundColor = '#8685ad';
+      submitButton.removeAttribute('disabled');
     }, 4000);
   }
 
@@ -81,7 +110,6 @@ searchMess.onfocus = function () {
 };
 
 });
-
 
               //section =.traffic-nav // hourly-monthly charts//
 
@@ -159,6 +187,8 @@ let traffic = new Chart(myChart3, {
     }]
   },
   options:{
+    responsive: true,
+    maintainAspectRatio: true,
     title:{
       display:true,
       text:'Traffic',
@@ -426,27 +456,33 @@ const switchContainer = document.querySelector(".switch-container");
 const emailNotification = document.getElementById("emailNotifications");
 const profileToPublic = document.getElementById("profileToPublic");
 const timeZone = document.getElementById("timeZone");
+const saveBtn = document.querySelector(".save-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
 
+saveBtn.addEventListener('click', function (e) {
 
-// // Save settings local storage
-// saveSettings.addEventListener('click', function (e) {
+// Prevent form from submitting
+  e.preventDefault();
+  localStorage.setItem('emailNotifications', emailNotifications.checked);
+  localStorage.setItem('profileToPublic', profileToPublic.checked);
+  localStorage.setItem('timeZone', timeZone.selectedIndex);
+})
 
-// // Prevent form from submitting
-//   e.preventDefault();
-
-//   localStorage.setItem('emailNotifications', emailNotifications.checked);
-//   localStorage.setItem('profileToPublic', profileToPublic.checked);
-//   localStorage.setItem('timeZone', timeZone.selectedIndex);
-
-
+cancelBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  emailNotifications.checked = false;
+  profileToPublic.checked = false;
+  timeZone.selectedIndex = 0;
+  localStorage.clear();
+});
 // // Listen for form submit///adding event listener to the form
 // document.getElementById('localSetting').addEventListener('submit', localSetting);
 
-// // Save Setting
+// Save Setting
 
 // function localSetting(e){
 //   // Get form values
-//   var localSetting =document.getElementById('localSetting').value;
+//   var localSetting =document.getElementById('emailNotifications').value;
 // //  
 //   if(!validateForm(localSetting)){
 //     return false;
@@ -456,7 +492,7 @@ const timeZone = document.getElementById("timeZone");
 // //     name: siteName,
 // //   
 // //   }
-// // Test if bookmarks is null
+// // Test if localsetting is null
 
 // if(localStorage.getItem('localSetting') === null){
 //   // Init array
@@ -475,9 +511,10 @@ const timeZone = document.getElementById("timeZone");
 // // }
 
 // // Clear form
-// document.getElementById('myForm').reset();
+// document.getElementById('emailNotifications').reset();
+// document.getElementById('profileToPublic').reset();
 
-// // Re-fetch bookmarks
+// // Re-fetch localSetting
 // fetchLocalSetting();
 
 // e.preventDefault();
@@ -497,11 +534,11 @@ const timeZone = document.getElementById("timeZone");
 // // Re-set back to localStorage
 // localStorage.setItem('localSetting', JSON.stringify(localSetting));
 
-// // Re-fetch bookmarks
+// // Re-fetch localSetting
 // fetchLocalSetting();
 // }
 
-// // Fetch bookmarks
+// // Fetch localSetting
 // function fetchLocalSetting(){
 // // Get localSetting from localStorage
 // var localSetting = JSON.parse(localStorage.getItem('localSetting'));
