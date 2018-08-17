@@ -52,14 +52,9 @@ margin: 0;
   @extend %pointer;
 }
 .switch-container span {
-  // height: 50px;
-  // width: 50px;
   font-size: 26px;
   color: $grey;
 }
-
-
-
 
 li.public,
 li.notify{

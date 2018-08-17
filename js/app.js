@@ -449,7 +449,7 @@ let membersListArray = memberNames();
 autocomplete(document.getElementById("searchMess"), membersListArray);
 
 
-////////local storage example/////
+////////local storage/////
                      //settings section///
 
 const switchContainer = document.querySelector(".switch-container");
@@ -475,74 +475,8 @@ cancelBtn.addEventListener('click', function (e) {
   timeZone.selectedIndex = 0;
   localStorage.clear();
 });
-// // Listen for form submit///adding event listener to the form
-// document.getElementById('localSetting').addEventListener('submit', localSetting);
 
-// Save Setting
 
-// function localSetting(e){
-//   // Get form values
-//   var localSetting =document.getElementById('emailNotifications').value;
-// //  
-//   if(!validateForm(localSetting)){
-//     return false;
-//   }
 
-// //   var localSet = {
-// //     name: siteName,
-// //   
-// //   }
-// // Test if localsetting is null
-
-// if(localStorage.getItem('localSetting') === null){
-//   // Init array
-//   var localSetting = [];
-//   // Add to array
-//   localSetting.push(localSet);
-//   // Set to localStorage
-//   localStorage.setItem('localSetting', JSON.stringify(localSetting));
-// } else {
-//   // Get localSetting from localStorage
-//   var localSetting = JSON.parse(localStorage.getItem('localSetting'));
-//   // Add bookmark to array
-//   localSetting.push(localSet);
-//   // Re-set back to localStorage
-//   localStorage.setItem('localSetting', JSON.stringify(localSetting));
-// // }
-
-// // Clear form
-// document.getElementById('emailNotifications').reset();
-// document.getElementById('profileToPublic').reset();
-
-// // Re-fetch localSetting
-// fetchLocalSetting();
-
-// e.preventDefault();
-// }
-
-// // Delete localSetting
-// function deleteLocalSetting{
-// // Get localSetting from localStorage
-// var localSetting = JSON.parse(localStorage.getItem('localSetting'));
-// // Loop through localSetting
-// for(var i =0;i < localSetting.length;i++){
-//   if(localSetting[i].url == url){
-//     // Remove from array
-//     localSetting.splice(i, 1);
-//   }
-// }
-// // Re-set back to localStorage
-// localStorage.setItem('localSetting', JSON.stringify(localSetting));
-
-// // Re-fetch localSetting
-// fetchLocalSetting();
-// }
-
-// // Fetch localSetting
-// function fetchLocalSetting(){
-// // Get localSetting from localStorage
-// var localSetting = JSON.parse(localStorage.getItem('localSetting'));
-// // Get output id
-// var localSettingResults = document.getElementById('localSettingResults');
 
 

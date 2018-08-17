@@ -3,14 +3,7 @@
 // Use the provided SVG icons for each of the social networks.
 // Style the social information to match the corresponding social network.
 // Style to match the overall look and feel of the dashboard.
-// #stat-wrapper {
-//   display: grid;
-//   grid-column: 2/6;
-//   grid-row: 8;
-//   margin: 3em;
-// }
 
-//mobile first//
 .stats {
   width: 100%;
   display: grid;
@@ -24,6 +17,7 @@
   grid-template-columns: repeat(3, 1fr);
 } 
 }
+
 .twit, .face, .goog {
   display:grid;
   border: $border;
@@ -75,14 +69,6 @@
   padding-left: 15px;
 }
 
-//   #stat-wrapper h4 {
-//    font-size: 18px;
-//    font-family: Arial, Helvetica, sans-serif;
-//    text-transform: uppercase;
-//    color:$grey;
-//    padding-bottom: 25px;
-//    grid-column: max-content;
-//  }
  strong {
    color:$grey;
    font-size: 60px;

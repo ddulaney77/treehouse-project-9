@@ -7,10 +7,8 @@
 // You will need to make up this data -- you can see the mockup for sample dat
 .bar{
   grid-area: bar;
-  // grid-template-columns: 1fr 1fr;
   border: $border;
 }
 .bar-chart {
-  
   max-width: 100%;
 }

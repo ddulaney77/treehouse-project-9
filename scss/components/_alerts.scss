@@ -8,7 +8,6 @@
 .alert {
   display: grid;
   grid-area: alert;
-  // grid-template-columns: 100px max-content 1fr;
   padding: 20px;
   background-color: $color-primary;
   color: $white;
@@ -17,8 +16,6 @@
   .alert {
   display: grid;
   grid-area: alert;
-  // grid-template-columns: 100px max-content 1fr;
-  padding: 20px;
   background-color: $color-primary;
   color: $white;
 }
