@@ -444,21 +444,26 @@ h4 {
   box-shadow: 0 0 1px #333; }
 
 .container {
+  max-width: 100%;
   display: grid;
   grid-template-areas: "main" "main-nav" "dash" "alert" "traffic-nav"  "bar"  "donut"  "line" "stats" "members" "activity"  "mess" "set"; }
 
 .main-nav {
-  display: grid;
+  text-align: center;
+  display: inline-flex;
   grid-area: main-nav;
   grid-template-columns: 1fr;
   grid-auto-rows: 100px;
   background-color: #a09ed1;
-  border: 1px solid grey; }
+  border: 1px solid grey;
+  grid-gap: 20px; }
 
 .dashboard, .set-icon, .visit-icon, .member-icon {
+  display: inline-block;
   max-width: 100%;
   height: 50px;
-  width: 50px; }
+  width: 50px;
+  margin: auto; }
 
 .dashboard {
   border-left: 6px solid limegreen; }
@@ -471,7 +476,14 @@ p {
   .container {
     display: grid;
     grid-template-columns: 120px repeat(2, 1fr);
-    grid-template-areas: "main-nav main main" "main-nav dash dash" "main-nav alert alert" "main-nav traffic-nav traffic-nav"  "main-nav bar bar"  "main-nav donut donut"  "main-nav line line" "main-nav stats stats" "main-nav members members" "main-nav activity activity"  "main-nav mess mess" "main-nav set set"; } }
+    grid-template-areas: "main-nav main main" "main-nav dash dash" "main-nav alert alert" "main-nav traffic-nav traffic-nav"  "main-nav bar bar"  "main-nav donut donut"  "main-nav line line" "main-nav stats stats" "main-nav members members" "main-nav activity activity"  "main-nav mess mess" "main-nav set set"; }
+
+  .main-nav {
+    display: grid;
+    text-align: left; }
+
+  .dashboard, .set-icon, .visit-icon, .member-icon {
+    display: inherit; } }
 @media (min-width: 768px) {
   .container {
     display: grid;
@@ -617,8 +629,7 @@ span.closeX {
   margin: auto; }
 
 .stat-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  display: grid; }
 
 .stat-content p {
   text-align: center;
@@ -663,30 +674,42 @@ img {
 .members {
   display: grid;
   grid-area: members;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 100px;
+  justify-items: center;
+  text-align: center;
   border: 1px solid grey;
   font-size: 20px;
-  padding: 40px; }
+  padding: 40px;
+  grid-gap: 6px; }
 
+@media (min-width: 768px) {
+  .members {
+    justify-items: left;
+    text-align: left; } }
 /*An on/off widget for whether to send email notifications.
 An on/off widget for whether to set profile to public or private.
 A dropdown to select timezone options.
 Save and Cancel buttons (these do not have to do anything functional).
 Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
 span.gt {
+  display: none;
   font-size: 30px; }
+  @media (min-width: 768px) {
+    span.gt {
+      display: inline; } }
 
 .activity {
   display: grid;
   grid-area: activity;
-  grid-template-columns: 100px 6fr  1fr;
-  grid-auto-rows: 100px;
+  justify-items: center;
   border: 1px solid grey;
   font-size: 20px;
   grid-gap: 10px;
   padding: 40px; }
 
+@media (min-width: 768px) {
+  .activity {
+    justify-items: left;
+    grid-template-columns: 2fr 4fr 1fr; } }
 .mess {
   margin-left: 30px;
   display: grid;

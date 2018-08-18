@@ -11,17 +11,26 @@ Save and Cancel buttons (these do not have to do anything functional).
 Local storage is used to save the settings. When page is reloaded the settings are remembered.*/
 
 span.gt {
+  display: none;
   font-size: 30px;
+  @media(min-width:768px){
+    display: inline;
+  }
  }
 
  .activity {
   display: grid;
   grid-area: activity;
-  grid-template-columns: 100px 6fr  1fr;
-  grid-auto-rows: 100px; 
+  justify-items: center;
   border: $border;
   font-size: 20px;
   grid-gap: 10px;
   padding: 40px;
 }
  
+@media(min-width:768px){
+  .activity{
+    justify-items:left;
+    grid-template-columns: 2fr 4fr 1fr;
+  }
+}
